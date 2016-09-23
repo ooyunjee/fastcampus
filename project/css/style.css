@@ -715,3 +715,60 @@ body {
   top: 2px;
   color: #41e347;
 }*/
+
+/* 검색 */
+.search {
+	background: linear-gradient(to bottom, #dedede 0%, #989898 100%);
+	border: 1px solid #333;
+	border-bottom-color: #fff;
+	padding: 15px 20px 10px;
+	border-radius: 15px 15px 0 0;
+}
+
+.search label::before {
+	content: "z";
+	font-family: 'webcafeIcon';
+	position: relative;
+	top: 2px;
+}
+
+#keyword {
+	border-radius: 3px;
+	border: 1px solid #333;
+	padding: 1px 1px 1px 5px;
+	box-sizing: border-box;
+	width: 210px;
+	height: 20px;
+}
+
+.btn-search{
+	width: 45px;
+	height: 22px;
+	border: 1px solid #aaa;
+	padding: 2px 5px;
+	border-radius: 2px;
+	color: #fff;
+	background: linear-gradient(to bottom, #9c9da1 0%,#666666 30%,#4e4f56 100%);
+	background-color: #666;
+}
+
+/*.search {
+	border-radius: 15px 15px 0 0;
+	border: 1px solid #666;
+	border-bottom: none;
+	padding: 10px 10px 0 10px;
+	background-image: linear-gradient(to bottom, #cccccc 0%, #fff 100%);
+}
+
+.search fieldset {
+	padding-left: 45px;
+}
+
+.search label, .search input, .btn-search {
+	margin-right: 5px;
+}
+
+.search label::before {
+	content: "r";
+	font-family: 'webcafeIcon';
+}*/
