@@ -23,9 +23,19 @@ img, fieldset {
 
 /* 숨김 컨텐츠 */
 .a11y, .hidden, legend {
-  background: #ff0;
   position: absolute;
   left: -9999em;
+}
+
+/* 건너뛰기 링크 */
+.a11y:focus {
+	background: #000;
+	color: #fff !important;
+	top: 2px;
+	left: 50%;
+	z-index: 100;
+	padding: 10px 2rem;
+	margin-left: -5rem; /* box 크기의 절반 */
 }
 
 /* 본문 스타일 */
@@ -62,7 +72,8 @@ body {
 }
 
 .wrapper {
-  background-color: silver;
+  background: url(images/bg_flower.png) no-repeat 50% 0, linear-gradient(to bottom, #aaa 0%, #fff 70%, #fff 100%);
+	background-color: #ccc;
 }
 
 .header, .visual, .main, .slogan, .footer {
@@ -76,7 +87,6 @@ body {
 }
 
 .visual {
-  /*background-color: gray;*/
   height: 10vh;
 }
 
@@ -114,11 +124,11 @@ body {
 }
 
 .footer-wrap {
-  background-color: pink;
+	background: linear-gradient(to bottom, #aaa 0%, #fff 100%);
+	background-color: #ccc;
 }
 
 .footer {
-  background-color: yellow;
   height: 10vh;
 }
 
@@ -405,6 +415,11 @@ body {
 	border-radius: 3px;
 	background-color: #fff;
 	background-image: linear-gradient(to bottom, #fff 0%,#fff 100%);
+}
+
+.btn-login:hover {
+	color: #fff;
+	background: #b7b0cc;
 }
 
 .member {
@@ -718,7 +733,7 @@ body {
 
 /* 검색 */
 .search {
-	background: linear-gradient(to bottom, #dedede 0%, #989898 100%);
+	background: linear-gradient(to bottom, #ccc 0%, #f7f7f7 100%);
 	border: 1px solid #333;
 	border-bottom-color: #fff;
 	padding: 15px 20px 10px;
