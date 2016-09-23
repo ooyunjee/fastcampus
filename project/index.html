@@ -11,6 +11,16 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
 		<link rel="stylesheet" href="css/style.css">
 		<script src="js/webcafe.js"></script>
+		<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+		<script>
+		$(function(){
+			$(".board h2>a").click(function(e){
+			  e.preventDefault();
+				$(e.target).parents("div").removeClass("off").addClass("on")
+				       .siblings().removeClass("on").addClass("off");
+			});
+		});
+		</script>
 	</head>
 	<body>
 		<a href="#main-contents" class="a11y">본문 바로가기</a> <!-- fragment 식별자 -->
