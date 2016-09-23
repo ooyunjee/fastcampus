@@ -118,18 +118,8 @@ body {
   order: 3;
 }
 
-.slogan {
-  background-color: lime;
-  height: 10vh;
-}
-
 .footer-wrap {
-	background: linear-gradient(to bottom, #aaa 0%, #fff 100%);
-	background-color: #ccc;
-}
-
-.footer {
-  height: 10vh;
+	background: #ccc linear-gradient(to bottom, #aaa 0%, #fff 100%);
 }
 
 /* ==============================================================
@@ -1056,4 +1046,126 @@ button.btn-event-next {
   position: relative;
   top: 2px;
   color: #41e347;
+}
+
+/* ==============================================================
+ SLOGAN
+============================================================== */
+.slogan {
+	position: relative;
+}
+
+/* 슬로건 제목 */
+.slogan-subject {
+	box-sizing: border-box;
+	width: 110px;
+	height: 83px;
+	padding-top: 20px;
+	font-size: 11px;
+	text-align: center;
+	position: absolute;
+	left: 35px;
+	bottom: -25px;
+}
+
+.slogan-subject span {
+	display: block;
+}
+
+/* position 트릭 */
+.slogan-subject::before {
+  content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 110px;
+	height: 83px;
+	background: url(images/coffee.png) no-repeat;
+}
+
+.slogan-contents {
+	padding: 10px 100px 10px 200px;
+	color: #a09784;
+}
+
+.slogan-contents q {
+	font-weight: bold;
+}
+
+.slogan-contents q::before {
+	font-size: 30px;
+	position: relative;
+	top: 10px;
+}
+
+.slogan-contents q::after {
+	content: "";
+}
+
+/*.slogan-contents q {
+	quotes: "[["  "]]";
+}*/
+
+/* ==============================================================
+ FOOTER
+============================================================== */
+.footer {
+	position: relative;
+	padding: 10px 100px 10px 200px;
+}
+
+/* 푸터 로고 */
+.footer-logo{
+	position: absolute;
+	top: 60px;
+	left: 45px;
+}
+
+/* HTML5&CSS3 로고 */
+.tech-logo{
+	position: absolute;
+	top: 15px;
+	right: 0;
+}
+
+/* 주소 및 저작권정보 */
+address{
+	font-style: normal;
+	margin-bottom: 5px;
+}
+address span{
+	margin-right: 15px;
+}
+address, .copyright{
+	font-size: 1.3rem;
+}
+
+/* 사이트 이용 안내 */
+.guide-list {
+	background: #7b8385;
+	margin-bottom: 10px;
+	overflow: hidden; /* float 이슈: 부모요소에 hidden, 잃어버렸던 높이값 찾아줌 */
+	border-radius: 5px;
+	padding-left: 15px;
+}
+
+.guide-list a {
+	color: #fff !important;
+	display: block;
+	padding: 5px 0 5px 15px;
+}
+
+.guide-list li {
+	float: left;
+}
+
+.guide-list a::after {
+	content: "|";
+  padding-left: 15px;
+	position: relative;
+	top: -1px;
+}
+
+.guide-list li:last-child a::after {
+	content: "";
 }
