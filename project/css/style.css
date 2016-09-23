@@ -1,0 +1,636 @@
+@charset "utf-8";
+@import url(normalize.css);
+@import url(fonts.css);
+
+/*.header .banner {
+  // header의 자식 중 banner
+  background: #ff0; // property
+}*/
+
+/* 스타일 초기화 */
+html,body,div,header,nav,section,aside,article,footer,figure,figcaption,ul,ol,li,dl,dt,dd,h1,h2,h3,h4,h5,h6,p,fieldset{
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+img, fieldset {
+  border: 0;
+}
+
+/* 숨김 컨텐츠 */
+.a11y, .hidden, legend {
+  background: #ff0;
+  position: absolute;
+  left: -9999em;
+}
+
+/* 본문 스타일 */
+html {
+  font-size: 0.625em; /* 10px, 자식 요소에 상속함 */
+}
+body {
+  color: #666;
+  font-family: 'Noto Sans Regular';
+  font-size: 1.4rem; /* 10px * 1.4 */
+  background: #fff;
+  line-height: 1.2;
+}
+
+/* 링크 스타일 */
+a:link { /* 가상 클래스 선택자 pseudo */
+  text-decoration: none;
+  color: inherit; /* 강제 상속 키워드 */
+}
+a:visited {
+  text-decoration: none;
+  color: #666;
+}
+a:hover, a:focus {
+  color: #f00;
+}
+a:focus {
+  outline: 1px dotted #333;
+}
+
+/* 레이아웃 */
+body {
+  margin: 0;
+}
+
+.wrapper {
+  background-color: silver;
+}
+
+.header, .visual, .main, .slogan, .footer {
+  width: 940px;
+  margin: 0 auto;
+  box-sizing: border-box;  /* padding, border 합해서 width 랜더링*/
+}
+
+.header {
+  background-color: #fff;
+}
+
+.visual {
+  /*background-color: gray;*/
+  height: 10vh;
+}
+
+.main {
+  background-color: #fff;
+  min-height: 400px;
+  /*display: -webkit-flex;
+  display: -ms-flex; prefix */
+  display: flex; /* flexible box가 됨, default direction: row */
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  padding: 30px 15px;
+  border-radius: 15px 15px 0 0;
+}
+
+.col1 {
+  width: 250px;
+  order: 1;
+}
+
+.col2 {
+  width: 380px;
+  order: 2;
+}
+
+.col3 {
+  width: 190px;
+  order: 3;
+}
+
+.slogan {
+  background-color: lime;
+  height: 10vh;
+}
+
+.footer-wrap {
+  background-color: pink;
+}
+
+.footer {
+  background-color: yellow;
+  height: 10vh;
+}
+
+/* ==============================================================
+ HEADER
+============================================================== */
+.header {
+  position: relative;
+  padding: 0 30px 42px;
+  border-radius: 0 0 30px 30px;
+}
+
+/* 로고 */
+.logo {
+  position: absolute;
+  top: 50px;
+  left: 60px;
+}
+
+/* 안내링크 */
+.info-menu {
+  text-align: right;
+  padding: 2px 0;
+  position: relative;
+  right: -10px;
+}
+
+.info-menu * {
+  display: inline-block;
+}
+
+.info-menu li::before {
+  content: ":";
+}
+
+.info-menu li:first-child::before {
+  content: "";
+}
+
+.info-menu a {
+  padding: 8px 20px;
+  text-transform: uppercase;
+}
+
+/* 메인 메뉴 */
+.main-menu {
+  background: linear-gradient(to bottom, #f9c9c7 0%, #faaca8 30%, #faaca8 70%, #f9c9c7 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  background-color: #faaca8;
+  padding-left: 217px;
+  height: 45px;
+  border-top: 2px solid #000;
+}
+
+.main-menu a {
+  outline: 0;
+}
+
+.main-menu > li { /* 첫번째 depth의 li만 */
+  float: left;
+  font-family: 'Noto Sans Bold';
+  position: relative;
+}
+
+.main-menu > li > a { /* 상속 관련 이슈 해결 - !important 사용 안해도됨. a:visited 문제 */
+  font-size: 1.6rem;
+  color: #fff;
+  padding: 0 20px;
+  border-left: 1px solid #fff;
+  line-height: 45px;
+  display: block;
+  text-shadow: 1px 0 0 rgba(0, 0, 0 ,0.2),
+               0 1px 0 rgba(0, 0, 0 ,0.2),
+               -1px 0 rgba(0, 0, 0 ,0.2),
+               0 -1px rgba(0, 0, 0 ,0.2);
+}
+
+.main-menu > li > a:hover,
+.main-menu > li > a:focus {
+  color: #ff0;
+}
+
+.main-menu > li > a:hover::after,
+.main-menu > li > a:focus::after {
+  content: "";
+  display: block;
+  border-top: 2px solid #000;
+}
+
+.main-menu ul {
+  position: absolute;
+  top: 47px;
+  white-space: nowrap; /* nowrap: 줄바꿈 금지, 강제로 부모 상자의 width를 늘림. */
+}
+
+.about-html {
+  left: 0;
+  display: none;
+}
+
+.about-css {
+  left: 0;
+  display: none;
+}
+
+.web-standard {
+  left: 0;
+  display: none;
+}
+
+.web-accessibility {
+  left: -200px;
+  display: none;
+}
+
+.qna {
+  left: -230px;
+  display: none;
+}
+
+.archive {
+  right: -20px;
+  display: none;
+}
+
+.main-menu ul li,
+.main-menu ul a {
+  display: inline-block;
+}
+
+.main-menu ul a {
+  padding: 10px;
+}
+
+.main-menu ul a::before {
+  content: "r";
+  font-family: "webcafeIcon";
+  position: relative;
+  top: 2px;
+}
+
+.main-menu ul a:hover::before,
+.main-menu ul a:focus::before {
+  content: "c";
+}
+
+/* ==============================================================
+ VISUAL
+============================================================== */
+
+/* text animation */
+.visual {
+  height: 120px;
+  position: relative;
+}
+
+/* 변하는 값만 넣어주면 된다. */
+@keyframes text-ani {
+  0% {
+    font-size: 12px;
+    opacity: 0;
+    transform: translate(0, 0);
+    /*top: 0;
+    left: 0;*/
+  }
+  100% {
+    font-size: 24px;
+    opacity: 1;
+    transform: translate(400px, 70px);
+    /*top: 50px;
+    left: 200px;*/
+  }
+}
+
+@keyframes flower_ani {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.visual-text {
+  /*position: absolute;*/
+  font-family: Georgia, serif; /* serif: 글꼴군, 웹폰트 사용시에는 사용하지 않는다. 무시됨.*/
+  display: inline-block;
+  /*animation-name: text-ani;
+  animation-duration: 5s;
+  animation-fill-mode: forwards; /* 끝난 상태로 멈춤 */
+  /*animation-delay: 1s;
+  animation-iteration-count: 3;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-play-state: paused;*/
+  animation: text-ani 5s forwards ease-in-out; /* duration delaytime*/
+}
+
+/* background animation */
+.visual::before, .visual::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  animation: flower_ani 2s infinite alternate;
+}
+
+.visual::before {
+  /*background-color: yellow;
+  background-image: url(images/ani_flower_01.png), url(images/ani_flower_02.png);*/ /* 배경이미지는 나중에 선언한 것이 더 밑으로 */
+  /*background-repeat: no-repeat;
+  background-position: 0 -15px, 670px 0;*/
+  /*background-attachment: scroll;*/ /* scroll: 컨텐츠랑 배경이 같이 스크롤 됨 fixed: 컨텐츠만 스크롤 됨 */
+  background: url(images/ani_flower_01.png) no-repeat 0 -15px, url(images/ani_flower_02.png) no-repeat 670px 0;
+}
+
+.visual::after {
+  background: url(images/ani_flower_03.png) no-repeat 300px 0, url(images/ani_flower_04.png) no-repeat 800px 15px;
+  animation-delay: 1s;
+}
+
+/* ==============================================================
+ MAIN - login, 유효성 검사, 배너링크, 웹 관련 용어
+============================================================== */
+/* 로그인 */
+.login {
+  background: #ddd6f3 radial-gradient(circle at top right, #ddd6f3, #faaca8);
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.3); /* x y blur spread color */
+}
+
+.login-subject {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-family: "Noto Sans Bold";
+  text-indent: 10px;
+}
+
+.login form {
+  background: #fff;
+  margin-top: 10px;
+  border-radius: 5px 5px 0 0;
+  padding: 10px 10px 0 10px;
+}
+
+
+.login fieldset {
+  position: relative;
+  border-bottom: 1px solid #999;
+}
+
+.user-email, .user-pw {
+  /*background: pink;*/
+  padding-bottom: 10px;
+}
+
+.login label {
+  display: inline-block;
+  width: 4em;
+  color: #666;
+}
+
+.login input {
+  box-sizing: border-box;
+  width: 90px;
+  height: 20px;
+  border: 1px solid #b3b3b3;
+  padding: 1px 1px 1px 5px;
+}
+
+.btn-login {
+  width: 50px;
+	height: 50px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	color: #b7b0cc;
+	font-size: 1.2rem;
+	padding: 2px;
+	font-weight: bold;
+	border:1px solid #b7b0cc;
+	border-radius: 3px;
+	background-color: #fff;
+	background-image: linear-gradient(to bottom, #fff 0%,#fff 100%);
+}
+
+.member {
+  background: #fff;
+  border-radius: 0 0 5px 5px;
+  padding: 2px 10px;
+}
+
+.member::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.signup {
+  float: left;
+}
+
+.find {
+  float: right;
+}
+
+.member a {
+  display: block;
+  padding: 8px 0;
+  letter-spacing: -1px;
+}
+
+.member a::before {
+  content: "g";
+  font-family: "webcafeIcon";
+  position: relative;
+  top: 2px;
+  color: #b7b0cc;
+}
+
+/* 유효성 검사 배너 */
+.validation{
+	margin-top: 20px;
+}
+
+.validation li {
+  margin-bottom: 10px;
+  height: 30px;
+  line-height: 30px;
+  border: 1px solid #999;
+  border-radius: 15px;
+  text-indent: 55px;
+  background: url(images/validation_icon.png) no-repeat 25px 50% / 20px 20px,
+               linear-gradient(to bottom, #f7f7f7 0%, #ccc 100%);
+}
+
+.validation a{
+	display: block; /* cursor pointer 영역 부모 크기만큼 확장, 원래는 inline 글씨 크기만큼의 영역 */
+}
+
+/* 웹 관련 용어 배너 */
+.term {
+  border: 1px solid #999;
+  border-radius: 5px;
+  background: linear-gradient(to bottom, #f7f7f7 0%, #ccc 100%);
+  padding: 15px;
+}
+
+.term-subject {
+  font-size: 1.5rem;
+  font-family: 'Noto Sans Bold';
+}
+
+.term a {
+  display: block;
+  margin-top: 10px;
+}
+
+.term-list {
+  overflow: hidden;
+}
+
+.term-list-subject {
+  color: #305e9a;
+	margin-top: -2px;
+}
+
+.term-list-subject, .term-list-brief {
+  float: right;
+  width: 150px;
+}
+
+.term-list-thumbnail {
+  float: left;
+}
+
+.term-list-thumbnail img {
+  display: block;
+}
+
+.term-list-brief {
+  margin-top: 5px;
+  line-height: 1.4;
+}
+
+/* 구조 선택자 */
+.term a:nth-of-type(even) .term-list-subject,
+.term a:nth-of-type(even) .term-list-brief {
+  float: left;
+}
+
+.term a:nth-of-type(even) .term-list-thumbnail {
+  float: right;
+}
+
+/*
+.term {
+  margin-top: 20px;
+  border: 1px solid #999;
+  border-radius: 5px;
+  padding: 10px;
+  background: linear-gradient(to bottom, #f7f7f7 0%, #ccc 100%);
+}
+
+.term-subject {
+  margin-bottom: 10px;
+  font-family: 'Noto Sans Bold';
+  font-size: 1.6rem;
+}
+
+.term a {
+  display: block;
+}
+
+.term-list-subject {
+  color: #3369a6;
+  display: inline-block;
+  margin-bottom: 5px;
+  font-size: 1.5rem;
+}
+
+.term-list-thumbnail {
+  margin-right: 15px;
+  float: left;
+}
+
+.term-list-brief {
+  line-height: 20px;
+}*/
+
+
+/* ==============================================================
+ MAIN - 검색, 공지사항 및 자료실, 새소식
+============================================================== */
+
+/* 새소식 배너 */
+.news {
+  position: relative;
+}
+
+.news-subject {
+  color: #f00;
+  font-family: 'Noto Sans Bold';
+}
+
+.news-item {
+  position: relative;
+  margin-top: 25px;
+}
+
+.news-item::after {
+  content: "";
+  display: block;
+  height: 150px;
+}
+
+.news-item-subject {
+  font-size: 1.7rem;
+  padding-left: 120px;
+  width: 260px;
+  margin-bottom: 10px;
+}
+
+.news-item-subject::before {
+  content: "r";
+  font-family: 'webcafeIcon';
+  position: relative;
+  top: 2px;
+}
+
+.news-item-date {
+  font-size: 1.5rem;
+  display: inline-block;
+}
+
+.news-item-brief {
+  line-height: 1.3;
+  font-size: 1.6rem;
+}
+
+.news-item-date, .news-item-brief {
+  padding-left: 135px;
+  width: 245px;
+  margin-bottom: 10px;
+}
+
+.news figure {
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+}
+
+.news figure > img {
+  display: block;
+  box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px;
+}
+
+.news-more {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 1.6rem;
+}
+
+.news-more::before {
+  content: "p";
+  font-family: 'webcafeIcon';
+  position: relative;
+  top: 2px;
+  color: #41e347;
+}
