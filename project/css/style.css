@@ -857,8 +857,105 @@ body {
 }
 
 /* ==============================================================
- MAIN - 신규이벤트 및 관련 사이트
+ MAIN - 신규이벤트 및 관련 사이트, 인기사이트
 ============================================================== */
+/*신규 이벤트 및 관련사이트 */
+.event-related-wrap {
+	border: 1px solid #999;
+	border-radius: 5px;
+	background: linear-gradient(to bottom, #bbbbbb 0%, #dddddd 100%);
+	padding: 10px;
+	position: relative;
+	margin-top: 20px;
+}
+
+.event {
+	position: relative;
+}
+
+.event-subject, .related-subject {
+	font-size: 1.5rem;
+	font-family: 'Noto Sans Bold';
+}
+
+.event-subject span, .related-subject span {
+	color: #f00;
+}
+
+#event-detail {
+	margin-top: 10px;
+}
+
+.event-thumbnail {
+	text-align: center;
+}
+
+.event-thumbnail img {
+	box-shadow: 5px 5px 5px 0 #eee;
+}
+
+.event-brief {
+	margin: 10px 0;
+}
+
+.event-brief em {
+	font-style: normal;
+}
+
+.btn-event-wrap {
+	height: 18px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.btn-event-wrap button {
+	width: 19px;
+	height: 18px;
+	border: 0;
+	padding: 18px 0 0 0;
+	background: url(images/back_forward.png) no-repeat;
+	overflow: hidden;
+}
+
+button.btn-event-prev {
+	background-position: 0 0;
+}
+
+button.btn-event-next {
+  background-position: -36px 0;
+}
+
+/* 관련 사이트 */
+.related {
+	border-top: 1px solid #999;
+	padding-top: 10px;
+}
+
+.related-list {
+	border: 1px solid #999;
+	border-radius: 5px;
+	background: #fff;
+	margin-top: 10px;
+	height: 25px;
+	overflow: hidden;
+	transition: all 0.5s ease-in-out;
+}
+
+.related-list:hover {
+	padding: 10px 0;
+	height: 125px;
+}
+
+.related-list li {
+	height: 25px;
+	line-height: 25px;
+	text-indent: 2em;
+}
+
+.related-list a {
+	display: block;
+}
 
 /* 인기 사이트 */
 .hot {
@@ -867,6 +964,7 @@ body {
 	background: linear-gradient(to bottom, #bbbbbb 0%, #dddddd 100%);
 	padding: 10px;
 	position: relative;
+	margin-top: 20px;
 }
 
 .hot-subject {
