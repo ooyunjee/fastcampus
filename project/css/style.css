@@ -558,6 +558,87 @@ body {
 
 /* 새소식 배너 */
 .news {
+	margin-top: 20px;
+	position: relative;
+}
+
+.news::before {
+	content: "";
+	position: absolute;
+	top: 25px;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	background: linear-gradient(to right, #333 0%, #fff 100%);
+}
+
+.news-subject {
+	color: #f00;
+	font-size: 1.5rem;
+	font-family: 'Noto Sans Bold';
+}
+
+.news-item {
+	position: relative;
+	padding-left: 130px;
+	margin-top: 30px;
+}
+
+.news-item-subject {
+	font-size: 1.5rem;
+	position: relative;
+	top: -3px;
+}
+
+.news-item-subject::before {
+	content: "r";
+	font-family: 'webcafeIcon';
+	position: relative;
+	top: 2px;
+}
+
+.news-item-date, .news-item-brief {
+	margin-left: 1.5rem;
+	margin-top: 5px;
+}
+
+.news-item-date {
+	display: block;
+}
+
+.news-item-brief {
+	line-height: 1.5;
+}
+
+.news-item figure {
+	position: absolute;
+	top: 0;
+	left: 0;
+	text-align: center;
+}
+
+.news-item img {
+	margin-bottom: 30px;
+	box-shadow: 0 10px 5px 0 rgba(0, 0, 0, 0.3);
+}
+
+.news-more {
+	/* absolute, float => block화 */
+	position: absolute;
+  top: -8px;
+	right: -8px;
+	padding: 8px;
+}
+
+.news-more::before {
+	content: "p";
+  font-family: 'webcafeIcon';
+  position: relative;
+  top: 2px;
+  color: #41e347;
+}
+
+/*.news {
   position: relative;
 }
 
@@ -633,4 +714,4 @@ body {
   position: relative;
   top: 2px;
   color: #41e347;
-}
+}*/
