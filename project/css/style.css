@@ -772,3 +772,94 @@ body {
 	content: "r";
 	font-family: 'webcafeIcon';
 }*/
+
+/* 공지사항 및 자료실 */
+.board {
+	background: yellow;
+	position: relative;
+	margin-top: 20px;
+	height: 180px;
+}
+
+.on .notice-more, .on .pds-more,
+.on .notice-list, .on .pds-list {
+  display: block;
+}
+
+.off .notice-more, .off .pds-more,
+.off .notice-list, .off .pds-list {
+  display: none;
+}
+
+.notice-subject, .pds-subject {
+	float: left;
+}
+
+.notice-subject a, .pds-subject a {
+	background: linear-gradient(to bottom, #eee 0%, #ccc 100%);
+	font-size: 1.4rem;
+	display: block;
+	border: 1px solid #aaa;
+	padding: 7px 15px;
+	border-radius: 10px 10px 0 0;
+	color: #666;
+}
+
+.on .notice-subject a, .on .pds-subject a{
+	background: #fff;
+	color: #ff4911;
+	border-color: #ff6738;
+	border-bottom-color: #fff;
+}
+
+.notice-list, .pds-list {
+	background: skyblue;
+	position: absolute; /* absolute: 영역 차지 안함 */
+	top: 45px;
+	left: 0;
+	width: 100%;
+}
+
+.pds-list {
+  background: orange;
+}
+
+.board li {
+	margin: 5px 0;
+}
+
+.board li::before {
+	content: "r";
+  font-family: 'webcafeIcon';
+  position: relative;
+  top: 2px;
+}
+
+.board-title {
+  background: silver;
+	display: inline-block;
+	width: 290px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.board-date {
+	background: lime;
+	float: right;
+}
+
+.notice-more, .pds-more {
+	position: absolute;
+	top: 0;
+	right: -8px;
+	padding: 8px;
+}
+
+.notice-more::before, .pds-more::before {
+  content: "p";
+  font-family: 'webcafeIcon';
+  position: relative;
+  top: 2px;
+  color: #41e347;
+}
