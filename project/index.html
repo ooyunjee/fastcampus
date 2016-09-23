@@ -16,7 +16,7 @@
 		$(function(){
 			$(".board h2>a").click(function(e){
 			  e.preventDefault();
-				$(e.target).parents("div").removeClass("off").addClass("on")
+				$(e.target).parent().parent().removeClass("off").addClass("on")
 				       .siblings().removeClass("on").addClass("off");
 			});
 		});
