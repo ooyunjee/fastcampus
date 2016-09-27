@@ -1,0 +1,72 @@
+/* DAY2 style.css heoyunjee */
+@font-face {
+    font-family: 'YouandiModernTR';
+    font-style: normal;
+    font-weight: normal;
+    src: url(../fonts/Youandi_Modern_TextRegular.eot);
+    src: url(../fonts/Youandi_Modern_TextRegular.eot?#iefix) format('embedded-opentype'),
+         url(../fonts/Youandi_Modern_TextRegular.woff) format('woff')
+}
+@font-face {
+    font-family: 'YouandiModernTB';
+    font-style: normal;
+    font-weight: normal;
+    src: url(../fonts/Youandi_Modern_TextBold.eot);
+    src: url(../fonts/Youandi_Modern_TextBold?#iefix) format('embedded-opentype'),
+         url(../fonts/Youandi_Modern_TextBold.woff) format('woff')
+}
+@font-face {
+    font-family:'YouandiModernHEB';
+    font-style: normal;
+    font-weight: normal;
+    src: url(../fonts/Youandi_Modern_HeadExtraBold.eot);
+    src: url(../fonts/Youandi_Modern_HeadExtraBold.eot?#iefix) format('embedded-opentype'),
+         url(../fonts/Youandi_Modern_HeadExtraBold.woff) format('woff')
+}
+
+body {
+  margin: 4rem;
+  font-size: 75%;
+  line-height: 1.5;
+  font-family: 'YouandiModernTR';
+}
+
+/* 테이블 공통 디자인 */
+table {
+  /* 테두리 사이 공간 제거*/
+  border-collapse: collapse;
+  border-top: 2px solid #000;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+/* 디자이너: 표 제목을 화면에서 감춤
+   접근성 준수사항: 화면에서 감추되, 스크린리더는 읽음 */
+.readable-hidden {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  margin: -1px;
+}
+
+th, td {
+  border: 1px solid #eee;
+  border-top: none;
+}
+
+th, td {
+  padding: 0.45em 1em;
+}
+
+th {
+  text-align: left;
+  vertical-align: top;
+}
+
+td {
+  color: #777777;
+}
