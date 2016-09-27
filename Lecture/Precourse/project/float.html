@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>박스모델-position</title>
+  <style>
+  * {
+    margin: 0;
+  }
+  div {
+    background: yellow;
+    width: 500px;
+    clear: both;
+  }
+  h1 {
+    float: left;
+  }
+  h2 {
+    background-color: silver;
+  }
+  h3 {
+    background: pink;
+  }
+  p {
+    background: lime;
+    width: 500px;
+  }
+  p::after {
+    content: "";
+    background-color: aqua;
+    display: block;
+    clear: both;
+  }
+  img {
+    float: right;
+    position: relative;
+    right: -50px;
+  }
+  .note {
+    clear: none;
+    height: 100px;
+    overflow: auto;
+  }
+  </style>
+</head>
+<body>
+  <!-- normal flow, 선형구조 -->
+  <div class="box">
+    <h1>제목1</h1>
+    <h2>제목2</h2>
+  </div>
+  <h3>제목3</h3>
+  <p>
+    <img src="images/news.gif" alt="">
+    지난 12일 진도 5.8의 지진이 발생했을 때 국내 방송사들의 늦장 대응이 지탄을 받은 가운데
+  </p>
+  <div class="note">
+    지난 12일 진도 5.8의 지진이 발생했을 때 국내 방송사들의 늦장 대응이 지탄을 받은 가운데 방송통신위원회가 구축한 자막송출시스템이 제 성능을 발휘하지 못한 것으로 나타났다. 지진 발생 직후 10초 안에 방송 시청자들에 자막으로 공지되도록 설계됐으나 실제로는 10여분 넘게 걸렸다. 대피를 위한 골든타임을 한참 지난 후였다. 21일 유승희 더불어민주당 의원이 10개 주요방송사업자의 재난방송 보도 평균 시간을 분석한 결과, 기상청 지진 속보 이후 방송사들의 자막 방송까지는 평균 7분 정도 걸렸다. 12일 오후 7시45분 지진 당시 방송중 지진 발생 사실을 알리는 자막이 나오기까지 MBC의 경우는 18분, SBS는 15분이 걸렸다. JTBC는 14분, EBS는 8분이었다. 지진 자막 방송은 그나마 종합편성채널이 지상파보다 빨랐다. TV조선과 채널A가 7분, MBN 3분이었다. 보도채널인 YTN과 연합뉴스TV는 각각 6분과 5분 걸렸다. 재난방송 주관방송사인 KBS가 2분이었다.
+  </div>
+</body>
+</html>
