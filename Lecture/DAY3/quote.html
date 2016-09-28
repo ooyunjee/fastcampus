@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>인용(Quotation)</title>
+  <style>
+
+    /*#demo, #quot {}*/
+    /* 속성 선택자 */
+    [id] {}
+    [cite="http://wiki.com/quot"] {}
+    [data-app="fds-controller"] {}
+    [data-app |="fds"] {}
+  </style>
+</head>
+<body>
+  <!-- data만 넣으면 마음껏 넣을 수 있음 -->
+  <div id="demo" data-app="fds_controller">
+    <!-- Black Quotation -->
+    <!-- 인용 글 -->
+    <blockquote id="quot" cite="출처">
+      <p>인용1</p>
+      <!-- 인용절을 이야기 한 사람 citation -->
+      <cite>A</cite>
+      <p>인용2</p>
+      <cite>B</cite>
+      <p>인용3</p>
+      <cite>C</cite>
+    </blockquote>
+  </div>
+
+</body>
+</html>
