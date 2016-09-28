@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>축약, 인용</title>
+  <style>
+
+  /* 가상 클래스 */
+  /* 가상 요소 */
+  abbr { cursor: help; }
+
+  /* 미디어 쿼리 */
+  @media print {
+    body {
+      background: #fff !important;
+      color: #000 !important;
+    }
+
+    /* 가상 요소 */
+    abbr:after,
+    abbr::after {
+      content: '('attr(title)')';
+    }
+  }
+
+  /* css에 지원해주는 가상 클래스 */
+  /* 가상으로 클래스를 추가 */
+  /* 상태 디자인 */
+  /* <a href> */
+  /* 기본 상태 */
+  a:link { color: #01d58f; }
+  /* 방문한 상태 */
+  a:visited { color: #abd7d4; }
+  /* 호버 상태 */
+  a:hover { color: #c98cb0; }
+  /* 포커스 상태 */
+  a:focus { color: #dee49c; }
+  /* 활성화 상태 */
+  a:active { color: #89ac5c; }
+  /* 비활성화 상태 */
+  /*.deactive { color: #d7971a; }*/
+
+  /* 가상 요소 */
+  /* 요소가 없는데 있는 것 처럼 */
+  p::first-letter {
+    color: #a2e784;
+    float: left;
+    margin-right: 10px;
+    font-weight: 900;
+    font-size: 5rem;
+  }
+
+  /*.clear {
+    clear: both;
+  }*/
+
+  p::after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+  </style>
+</head>
+<body>
+  <p><span class="first-line">세상에서 가장 아름답고 독창적인 공연</span>으로 평가받는 아이슬란드 대표 록 밴드 '시규어 로스'가 현대카드 컬처프로젝트를 통해 내한 공연을 펼친다. 한 순간도 눈을 떼지 못하게 하는 놀라운 무대와 오케스트라가 함께 한다고 믿을 만큼 경이로운 음악을 만들어내는 시규어 로스는 낭만적이고 깊은 사운드로 세계적인 찬사를 받고 있다. 지금까지 7장의 정규 앨범을 발표한 가운데 바닐라 스카이 등 총 57개의 영화 및 드라마에 OST로 삽입되면서 신비롭고 몽환적인 영상미를 부각시키는 음악으로도 유명하다. 또한, 독창적인 음악 스타일을 구축하기 위한 혁신적인 시도로 Radiohead, Bjork 등 동시대 예술가들에게 지대한 영향을 끼치고 있다. 현대카드 컬처프로젝트 24 시규어 로스는 가히 세계 최고라 불릴 만큼 아름다운 시각적 효과와 라이브 공연이 줄 수 있는 극적인 경험을 선사하는 소중한 기회가 될 것이다.
+    <!-- <div class="clear"></div> -->
+  </p>
+  <ul>
+    <li>
+      <abbr lang="en" title="World Health Organization"><a href="/">WHO</a></abbr>
+    </li>
+    <li>
+      <abbr title="버스 카드 충전"><a class="link" href="/">버카충</a></abbr>
+    </li>
+    <li>
+      <abbr title="세상에서 제일 귀여운"><a href="/">세젤귀</a></abbr>
+    </li>
+    <li>
+      <abbr title="오존층 파괴 애교"><a href="/">오파애</a></abbr>
+    </li>
+    <li>
+      <abbr title="프론트엔드 디벨롭 스쿨"><a href="/">프디스</a></abbr>
+    </li>
+  </ul></body>
+</html>
