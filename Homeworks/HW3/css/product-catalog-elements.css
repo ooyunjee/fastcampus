@@ -90,15 +90,24 @@ body {
 .item-price {
   order: 2;
   width: 150px;
-  display: block;
+  /*display: block;*/
   padding: 35px;
   box-sizing: border-box;
+  position: relative;
 }
 
 .item-price p {
   font-size: 1.4rem;
   font-family: 'Oswald', sans-serif;
-  margin-bottom: 20px;
+}
+
+.item-price img {
+  position: absolute;
+  top: 70px;
+}
+
+.item-price img[src*="sale"] ~ p {
+  color: #f00;
 }
 
 /* item add to cart */
