@@ -25,7 +25,12 @@ body {
   margin: 0;
 }
 
-/**
+::selection {
+  background: #222;
+  color: #fff;
+}
+
+/*
  * --------------------------------
  * .magazine-photo-area
  * ----------------------------- */
@@ -79,33 +84,63 @@ body {
 
 .magazine-contents {
   float: right;
-  width: 40vw;
+  width: 45vw;
   padding: 5em 1em 1em 2em;
-  margin-right: 45px;
+  margin-right: 100px;
   background: #fff;
+  position: relative;
   z-index: 100;
+}
+
+.column-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+}
+
+.col1 {
+  order: 1;
+}
+
+.col2 {
+  order: 2;
 }
 
 .magazine-contents-head img {
   float: left;
   position: relative;
-  top: -20px;
+  top: -30px;
+  left: -36px;
 }
 
 .magazine-contents-head p {
    font-size: 0.875rem;
-   padding: 4em 1em 1em 3.8em;
+   padding-top: 3em;
 }
 
-.magazine-contents > img {
-  /*margin: 0 1em 1em 4.5em;*/
+.col1 {
+  padding: 4em 1em 1em 3.8em;
+  margin-right: 1em;
+}
+
+.col1 > img {
+  width: 100%;
+  margin: 1em 0;
 }
 
 .columns {
   column-count: 2;
   column-gap: 20px;
-  padding: 4em 1em 1em 3.8em;
   font-size: 0.75rem;
+}
+
+.col2 {
+  font-size: 0.75rem;
+}
+
+.col2 p::first-line {
+  font-weight: bold;
 }
 
 /*
