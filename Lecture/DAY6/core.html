@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="js/core.js"></script>
+  <style>
+  .container {
+    background: url("img/father-with-children-raising-arms.png") 95% 90% no-repeat;
+    background-attachment: fixed;
+  }
+
+  .box {
+    width: 100px;
+    height: 200px;
+    background: #e87b7b;
+    text-transform: capitalize;
+    padding: 1em;
+    margin: 1em;
+    border: 3px dashed #222;
+  }
+
+  .clip-padding {
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding-box;
+    background-clip: padding-box;
+  }
+
+  .clip-content {
+    -webkit-background-clip: content-box;;
+    -moz-background-clip: content-box;;
+    background-clip: content-box;;
+  }
+
+  .box-bg {
+    background: url("img/father-with-children-raising-arms.png") no-repeat;
+    background-size: 100% 100%;
+  }
+
+  .origin-border {
+    background-origin: border-box;
+  }
+
+  .origin-padding {
+    -webkit-background-origin: padding-box;
+    -moz-background-origin: padding-box;
+    background-origin: padding-box;
+  }
+
+  .origin-content {
+    -webkit-background-origin: content-box;;
+    -moz-background-origin: content-box;;
+    background-origin: content-box;;
+  }
+
+  .fl {
+    float: left;
+    margin-right: 10px;
+  }
+
+  .cf {
+    clear: both;
+  }
+
+  img {
+   display: block;
+  }
+
+  .text-color {
+    border-bottom: 1px solid currentColor;
+    color: #b9ac7d;
+    margin: 20px;
+    display: inline-block;
+  }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="fl">
+      <div class="box">clip border(default)</div>
+      <div class="box clip-padding">clip padding</div>
+      <div class="box clip-content">clip content</div>
+    </div>
+    <div class="fl">
+      <div class="box box-bg origin-border">origin border(default)</div>
+      <div class="box box-bg origin-padding">origin padding</div>
+      <div class="box box-bg origin-content">origin content</div>
+    </div>
+    <img class="cf" src="img/magazine-girl.png" alt="" usemap="#olleh-service-map">
+    <map name="olleh-service-map">
+      <area shape="rect" coords="200,200,300,300" href="" longdesc="" title="" alt="">
+    </map>
+
+    <dl>
+      <dt>정의 용어</dt>
+      <dd>정의 기술 내용</dd>
+      <dt>정의 용어</dt>
+      <dd>정의 기술 내용</dd>
+    </dl>
+
+    <table id="currency-table" border="1">
+      <caption>currency summary</caption>
+      <col>
+      <colgroup span="2"></colgroup>
+      <col>
+      <tr>
+        <th id="read-1" scope="rowgroup" rowspan="2">cell header1</th> <!-- 열 제목 -->
+        <th scope="colgroup" colspan="3">cell header2</th>
+      </tr>
+      <tr>
+        <th scope="col">cell header3</th> <!-- 열 제목 -->
+        <th id="read-3" scope="col">cell header3</th>
+        <th scope="col">cell header3</th>
+      </tr>
+      <tr>
+        <th id="read-2">cell data1</th>
+        <td>cell data2</td>
+        <td headers="read-1 read-2 read-3">cell data3</td>
+        <!-- 표가 복잡할 경우 스크린 리더가 read-1 read-2 read-3 순서로 읽어준다. ( understandable ) -->
+        <td>cell data4</td>
+      </tr>
+    </table>
+    <span class="text-color">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, sunt.</span>
+  </div>
+</body>
+</html>
