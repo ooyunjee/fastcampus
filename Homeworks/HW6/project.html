@@ -30,6 +30,7 @@
   }
   a:hover {
     color: #fff;
+    transition: all 0.4s ease-in-out;
   }
   a:active {
     color: #878994;
@@ -156,18 +157,37 @@
 
   }
   .project-list li {
-    width: 200px;
-    height: 80px;
-    /*border: 1px solid #878994;*/
+    width: 300px;
+    height: 200px;
+    border: 1px solid #878994;
     background: rgba(135, 137, 148, 0.14);
     margin: 2em;
     float: left;
   }
 
   .project-list li a {
-    width: 200px;
-    height: 80px;
+    width: 300px;
+    height: 200px;
+    position: relative;
+    transition: all 0.4s ease-in-out;
   }
+
+  .project-list li a:hover {
+    color: #222;
+  }
+
+  .project-list li a:hover:after {
+    content: "";
+    width: 300px;
+    height: 200px;
+    background: #222;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .project-list a[href*="article"] { background: url(img/project/project-article.png) no-repeat; background-size: cover; }
   </style>
 </head>
 <body>
@@ -188,12 +208,12 @@
     <main class="main">
       <div class="project-list">
         <ul>
-          <li><a href="FDS/article/index.html" class="align-center">article</a></li>
-          <li><a href="FDS/form/index.html" class="align-center">form</a></li>
-          <li><a href="FDS/hc-table/index.html" class="align-center">hyndaicard table</a></li>
-          <li><a href="FDS/attribute-selector/index.html" class="align-center">attribute selector</a></li>
-          <li><a href="FDS/product-catalog-elements/index.html" class="align-center">product catalog</a></li>
-          <li><a href="FDS/magazine/index.html" class="align-center">magazine</a></li>
+          <li><a href="https://ooyunjee.github.io/ooyunjee/FDS/article/index.html" class="align-center">article</a></li>
+          <li><a href="https://ooyunjee.github.io/ooyunjee/FDS/form/index.html" class="align-center">form</a></li>
+          <li><a href="https://ooyunjee.github.io/ooyunjee/FDS/hc-table/index.html" class="align-center">hyndaicard table</a></li>
+          <li><a href="https://ooyunjee.github.io/ooyunjee/FDS/attribute-selector/index.html" class="align-center">attribute selector</a></li>
+          <li><a href="https://ooyunjee.github.io/ooyunjee/FDS/product-catalog-elements/index.html" class="align-center">product catalog</a></li>
+          <li><a href="https://ooyunjee.github.io/ooyunjee/FDS/magazine/index.html" class="align-center">magazine</a></li>
         </ul>
       </div>
     </main>
