@@ -1,0 +1,133 @@
+@charset "UTF-8";
+
+body {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* GUIDE */
+.guide {
+  background: url("../img/leading-21.png");
+  min-height: 100vh;
+}
+
+/* LAYOUT */
+.container {
+  width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* TYPOGRAPHY*/
+body {
+  font: 87.5%/1.5 "Spoqa Han Sans", sans-serif;
+  /*14px/16*100 %*/
+}
+
+/* 본문 디자인 */
+p {
+  margin-top: 21px;
+  margin-bottom: 0;
+  letter-spacing: -0.02em;
+  /* 자간 : photoshop 자간 값 / 1000 em */
+}
+
+/* 제목 디자인 */
+h1, h2, h3, h4, h5, h6 {
+  /*margin-top: 21px;*/
+  margin-bottom: 0;
+  font-weight: 200;
+}
+
+h6 {
+  /*font-size: 14px;*/
+  font-size: 1em;
+  margin-top: 1.5em; /* 14/16 */
+  color: #787f94;
+}
+
+h5 {
+  /*font-size: 18.382px;*/
+  font-size: 1.313em; /* 1 * 1.313 */
+  line-height: 2.29;
+  /* 2칸*(1.5/1.313) */
+  margin-top: 1.14em;
+  color: #787f94;
+}
+
+h4 {
+  margin-top: 0.87em;
+  /*font-size: 24.135566px;*/
+  font-size: 1.723969em; /* 1.313 * 1.313 */
+  color: #787f94;
+  line-height: 1.74;
+  /* Math.ceil(1.723969 / 1.5) * (1.5 / 1.723969) */
+  /* 본문 글자 크기의 상대 비율 / 본문 글자 크기의 행간 비율 */
+  /* ceil() : 올림 */
+  /*
+   몇 칸의 행간 폭을 가지는가?: Math.ceil(본문 글자 크기의 상대비율/본문 글자 크기의 행간 비율)
+   글자 크기 비율에 상대적인 행간 비율 값은?: (본문 글자 크기의 행간 비율/본문 글자 크기의 상대비율)
+   행간은? 위 두개의 결과를 곱한 값
+   */
+}
+
+h3 {
+  font-size: 2.263571297em;
+  line-height: 1.33;
+  margin-top: 0.66em;
+}
+
+h2 {
+  font-size: 2.972069112961em;
+  line-height: 1.52;
+  margin-top: 0.51em;
+}
+
+h1 {
+  font-size: 3.9023267453177928em;
+  line-height: 1.16;
+  margin-top: 0.39em;
+}
+
+img {
+  margin-top: 21px;
+  vertical-align: top;
+}
+
+/*
+body, h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+  padding: 0;
+}
+
+.typography h1, .typography h2, .typography h3, .typography h4, .typography h5, .typography h6, .typography p {
+  display: inline-block;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.container {
+  width: 1920px;
+  height: 1555px;
+  padding: 105px 160px 85px;
+  box-sizing: border-box;
+}
+
+.typo-title, .color-title, .lists-title, .table-title {
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #7171ef;
+  font-weight: bold;
+}
+
+.typography {
+  width: 640px;
+}
+.typography li span{
+  display: inline-block;
+  margin-right: 35px;
+  width: 67px;
+}*/

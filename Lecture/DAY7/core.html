@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>자바스크립트 코어 - 데이터 타입 변형, 타입 체크</title>
+  <link href="http://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css" rel="stylesheet" type="text/css">
+  <style>
+  body {
+    margin: 10rem;
+    font-family: "Spoqa Han Sans";
+    font-size: 3rem;
+    line-height: 1.5;
+  }
+  </style>
+  <script src="js/core.js"></script>
+</head>
+<body>
+
+  <p id="target">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, dolorem!</p>
+  <script>
+    var target_el = document.getElementById('target');
+    // target_el.style.fontSize = '2rem';
+    var st_font_size = window.getComputedStyle(target_el).fontSize;
+    console.log("st_font_size: ", st_font_size);
+    var conver_font_size = window.parseInt(st_font_size, 10);
+    console.log("conver_font_size: ", conver_font_size);
+  </script>
+</body>
+</html>
