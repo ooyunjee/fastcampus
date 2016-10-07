@@ -5,6 +5,10 @@ body {
   margin-bottom: 0;
 }
 
+th, td {
+  padding: 0;
+}
+
 /* GUIDE */
 .guide {
   background: url("../img/leading-21.png");
@@ -13,15 +17,28 @@ body {
 
 /* LAYOUT */
 .container {
-  width: 960px;
-  margin-left: auto;
-  margin-right: auto;
+  width: 1920px;
+  /*margin-left: auto;
+  margin-right: auto;*/
+  display: flex;
+  padding: 84px 160px;
+  box-sizing: border-box;
 }
 
+/* MODULE */
+.a11y {
+  position: absolute;
+  top: -9999em;
+}
 .align-center {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
 }
 
 body {
@@ -37,6 +54,13 @@ p, ul, ol, dl, dt, dd {
   /* 자간 : photoshop 자간 값 / 1000 em */
 }
 
+.col-1 {
+  flex: 1;
+}
+.col-2 {
+  flex: 1;
+}
+
 /* 리스트 스타일 */
 ul ul, ol ol, dd {
   margin-top: 0;
@@ -48,7 +72,7 @@ li {
 }
 
 /* 제목 디자인 */
-.typo-title, .lists-title, .color-title{
+.typo-title, .lists-title, .color-title, .table-title {
   font-size: 1.98em; /* 1 * 1.313 */
   color: #7171ef;
   line-height: 0.75;
@@ -176,18 +200,26 @@ img {
 /* END LISTS */
 
 /* COLOR */
+.color-list {
+  margin: 21px 0;
+}
 .color ul {
   list-style: none;
 }
 .color li {
   float: left;
   text-transform: uppercase;
+  margin-right: 30px;
+}
+.color li:last-child {
+  margin-right: 0;
 }
 .color-box {
   width: 100px;
   height: 100px;
   color: #fff;
   text-transform: uppercase;
+  margin-bottom: 6px;
 }
 .default {
   background: #787f94;
@@ -209,11 +241,104 @@ img {
 }
 .color li p {
   margin-top: 0;
+  font-size: 0.9em;
+  line-height: 1.67;
+  color: #2c2c2c;
+}
+.gray-1 {
+  background: #333741;
+}
+.gray-2 {
+  background: #586077;
+}
+.gray-3 {
+  background: #787f94;
+}
+.gray-4 {
+  background: #bac2d0;
+}
+.gray-5 {
+  background: #d9e0e9;
 }
 /* END COLOR */
 
+/* TABLE */
+.table {
+  margin-top: 441px;
+}
+.book-table {
+  width: 800px;
+  border-collapse: collapse;
+  border-spacing: 0;
+  line-height: 15;
+}
+.book-list-table {
+  margin-top: 42px;
+}
 
+.book-list-table tr {
+  border-bottom: 1px solid #e2e1e1;
+}
 
+.book-list-table thead tr {
+  background: #f8f8f8;
+  color: #63a2fc;
+}
+
+.book-table thead tr th:first-child {
+  text-align: left;
+}
+
+.book-table th,
+.book-table td {
+  font-size: 1em;
+  line-height: 3;
+  padding-left: 36px;
+}
+
+.book-table tbody td:nth-child(2),
+.book-table tbody td:nth-child(3),
+.book-table tbody td:nth-child(4),
+.book-table tbody td:nth-child(5) {
+  text-align: center;
+}
+
+/* book order list table */
+.book-order-list-table {
+  margin-top: 79px;
+}
+
+.book-order-list-table thead {
+  color: #63a2fc;
+}
+
+.book-order-list-table tbody {
+  border-top: 1px solid #222;
+  border-bottom: 1px solid #222;
+}
+
+.book-order-list-table tbody tr:nth-child(2) {
+  border-bottom: 1px solid #e2e1e1;
+}
+
+.book-order-list-table tbody tr:nth-child(2) td:first-child,
+.book-order-list-table tbody tr:nth-child(4) td:first-child {
+  text-align: center;
+}
+
+.book-order-list-table tbody td:nth-child(2),
+.book-order-list-table tbody td:nth-child(3),
+.book-order-list-table tbody td:nth-child(4),
+.book-order-list-table tbody td:nth-child(5) {
+  border-bottom: 1px dashed #e2e1e1;
+}
+
+.book-order-list-table tbody tr:nth-child(1) th,
+.book-order-list-table tbody tr:nth-child(3) th {
+  color: #63a2fc;
+  text-align: left;
+}
+/* END TABLE */
 
 
 
