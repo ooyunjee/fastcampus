@@ -7,10 +7,11 @@
   <title>Team Activity1</title>
   <link href="https://fonts.googleapis.com/css?family=Oswald|Varela+Round" rel="stylesheet">
   <link rel="stylesheet" href="css/team.css">
+  <link rel="stylesheet" href="css/grid.css">
 </head>
 <body>
-  <a href="#main-contents" class="a11y">본문 바로가기</a> <!-- fragment 식별자 -->
-  <div class="container guide">
+  <a href="#main-contents" class="a11y">본문 바로가기</a>
+  <div class="container show-grid">
     <header class="header">
       <p class="hamberger-img"><a href="#"><img src="img/assets/icon-hamberger.svg" alt="hamberger menu"></a></p>
       <p class="logo-img"><a href="team-activity.html"><img src="img/assets/icon-logo-aware.svg" alt="hamberger menu"></a></p>
@@ -58,43 +59,169 @@
       </div>
     </header>
     <main id="main-contents">
-      <section class="sliders">
-        <h1 class="a11y">sliders</h1>
-        <div class="main-slider">
-          <div class="slider-contents">
-            <span>men</span>
-            <h2>Replay Jeans Hyperflex</h2>
-            <p>Skinny Comfort Ultra Stretch Light Wash</p>
-            <a href="#" class="buy-now" title="바로 사러가기">
-              <span class="buy-now-cost">$145</span>
-              <span class="buy-now-text">Buy now</span>
-            </a>
+      <section class="products">
+        <h1 class="a11y">Products</h1>
+        <div class="sliders">
+          <div class="main-slider">
+            <div class="slider-contents">
+              <span>men</span>
+              <h2>Replay Jeans Hyperflex</h2>
+              <p>Skinny Comfort Ultra Stretch Light Wash</p>
+              <a href="#" class="buy-now" title="바로 사러가기">
+                <span class="buy-now-cost">$145</span>
+                <span class="buy-now-text">Buy now</span>
+              </a>
+            </div>
+            <img src="img/assets/photo-slider-content.png" alt="" width="720" height="480">
+            <div class="slider-arrow-btns">
+              <a href="" class="arrow-left"><img src="img/assets/icon-arrow-left.svg" alt="슬라이드 이전 사진 보기" ></a>
+              <a href="" class="arrow-right"><img src="img/assets/icon-arrow-right.svg" alt="슬라이드 다음 사진 보기"></a>
+            </div>
           </div>
-          <img src="img/assets/photo-slider-content.png" alt="" width="720" height="480">
-          <div class="slider-arrow-btns">
-            <a href="" class="arrow-left"><img src="img/assets/icon-arrow-left.svg" alt="슬라이드 이전 사진 보기" ></a>
-            <a href="" class="arrow-right"><img src="img/assets/icon-arrow-right.svg" alt="슬라이드 다음 사진 보기"></a>
+          <div class="right-slider">
+            <ul>
+              <li><a href="#"><img src="img/assets/photo-slider-slides-01.png" alt="" width="240" height="120" ></a></li>
+              <li><a href="#"><img src="img/assets/photo-slider-slides-02.png" alt=""></a></li>
+              <li><a href="#"><img src="img/assets/photo-slider-slides-03.png" alt=""></a></li>
+              <li><a href="#"><img src="img/assets/photo-slider-slides-04.png" alt=""></a></li>
+            </ul>
           </div>
         </div>
-        <div class="right-slider">
-          <ul>
-            <li><a href="#"><img src="img/assets/photo-slider-slides-01.png" alt="" width="240" height="120" ></a></li>
-            <li><a href="#"><img src="img/assets/photo-slider-slides-02.png" alt=""></a></li>
-            <li><a href="#"><img src="img/assets/photo-slider-slides-03.png" alt=""></a></li>
-            <li><a href="#"><img src="img/assets/photo-slider-slides-04.png" alt=""></a></li>
-          </ul>
+        <div class="banner row">
+          <a href="#" class="banner-women col-4">
+            <span>women</span>
+            <h2>Big Spring Sale - 70%</h2>
+            <p>Shoes, hats, pants, jeans.</p>
+          </a>
+          <a href="#" class="banner-men col-2">
+            <span>men</span>
+            <h2>Last Winter Sale Boots 70% Discount</h2>
+          </a>
+          <a href="#" class="banner-acc col-2">
+            <span>accessories</span>
+            <h2>New Hats for Every Day</h2>
+          </a>
+        </div>
+        <div class="featured row">
+          <a href="#" class="featured-1 col-2">
+            <img src="img/assets/icon-ruby.svg" alt="">
+            <h2>Featured products</h2>
+            <p>the best of our store</p>
+          </a>
+          <a href="#" class="featured-2 col-2">
+            <h3>H&amp;M Chino Shorts</h3>
+            <img src="img/assets/photo-featured-01.png" alt="" />
+            <p>$12</p>
+          </a>
+          <a href="#" class="featured-3 col-2">
+            <h3>Bobbies Elegant Leather Driving Shoes</h3>
+            <img src="img/assets/photo-featured-02.png" alt="" />
+            <p>$140</p>
+          </a>
+          <a href="#" class="featured-4 col-2">
+            <h3>Fiorelli Rita Striped Tote Bag</h3>
+            <img src="img/assets/photo-featured-03.png" alt="" />
+            <p>$170</p>
+          </a>
+          <a href="#" class="featured-5 col-2">
+            <h3>H&amp;M Polo Shirt</h3>
+            <img src="img/assets/photo-featured-04.png" alt="" />
+            <p>$9.95</p>
+          </a>
+          <a href="#" class="featured-6 col-2">
+            <h3>ASOS Skinny Band Felt Floppy Hat</h3>
+            <img src="img/assets/photo-featured-05.png" alt="" />
+            <p>$24</p>
+          </a>
+          <a href="#" class="featured-7 col-2">
+            <h3>Ted Baker Leather Messenger Bag</h3>
+            <img src="img/assets/photo-featured-06.png" alt="" />
+            <p>$344</p>
+          </a>
+          <a href="#" class="featured-8 col-2">
+            <h3>H&amp;M Canvas Parka</h3>
+            <img src="img/assets/photo-featured-07.png" alt="" />
+            <p>$69</p>
+          </a>
         </div>
       </section>
-      <div class="banner"></div>
-      <div class="featured"></div>
-      <div class="blog"></div>
-      <div class="test-about">
-        <div class="testimonials"></div>
-        <div class="about"></div>
+      <div class="blog row">
+        <a href="#" class="blog blog-1 col-2">
+          <img src="img/assets/icon-news.svg" alt="">
+          <h2>our blog</h2>
+          <p>tips, trends, advices</p>
+        </a>
+        <a href="#" class="blog blog-2 col-2">
+          <span>April 12, 2015</span>
+          <h3>The Most Stylish Fashion Designers of All Time</h3>
+          <span>by Anvar joraev</span>
+        </a>
+        <a href="#" class="blog blog-3 col-2">
+          <span>May 1, 2015</span>
+          <h3>One of America's Favorite Drunk Foods Is Being Recalled</h3>
+          <span>by Bahodir Komilov</span>
+        </a>
+        <a href="#" class="blog blog-4-1 col-2">
+          <span>May 1, 2015</span>
+          <h3>Surprise 'Games of Thrones' Clips Are Really Deep, Man</h3>
+        </a>
+        <a href="#" class="blog blog-4-2 col-2">
+          <span>April 7, 2015</span>
+          <h3>Patek Philippe Sells Out of $2.5 Million Watches</h3>
+        </a>
       </div>
-      <div class="brands"></div>
+      <div class="testi-about row">
+        <a href="#" class="testimonials col-4"></a>
+        <a href="#" class="about col-4"></a>
+      </div>
+      <div class="brands">
+        <a href="#" class="brands-1 col-1 align-center">
+          <img src="img/assets/icon-hm.png" alt="">
+        </a>
+        <a href="#" class="brands-2 col-1 align-center">
+          <img src="img/assets/icon-puma.png" alt="">
+        </a>
+        <a href="#" class="brands-3 col-1 align-center">
+          <img src="img/assets/icon-adidas.png" alt="">
+        </a>
+        <a href="#" class="brands-4 col-1 align-center">
+          <img src="img/assets/icon-converse.png" alt="">
+        </a>
+        <a href="#" class="brands-5 col-1 align-center">
+          <img src="img/assets/icon-boss.png" alt="">
+        </a>
+        <a href="#" class="brands-6 col-1 align-center">
+          <img src="img/assets/icon-nike.png" alt="">
+        </a>
+        <a href="#" class="brands-7 col-1 align-center">
+          <img src="img/assets/icon-crown.png" alt="">
+        </a>
+        <a href="#" class="brands-8 col-1 align-center">
+          <span>274</span>
+          <span>all brands</span>
+        </a>
+      </div>
     </main>
-    <footer class="footer"></footer>
+    <footer class="footer">
+      <div class="footer-1 col-8 align-center">
+        <ul>
+          <li><a href="#">men</a></li>
+          <li><a href="#">women</a></li>
+          <li><a href="#">kids</a></li>
+          <li><a href="#">accessories</a></li>
+          <li><a href="#">sale</a></li>
+          <li><a href="#">LookBook</a></li>
+          <li><a href="#">blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-2 col-8">
+        <div class="col-2">
+          <img src="img/assets/" alt="">
+        </div>
+        <div class="col-4"></div>
+        <div class="col-2"></div>
+      </div>
+    </footer>
   </div>
 
   <!-- <script src="js/team.js"></script> -->

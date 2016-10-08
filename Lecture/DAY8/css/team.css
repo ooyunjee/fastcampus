@@ -62,7 +62,8 @@ a:focus {
   width: 960px;
   height: 2300px;
   margin: 0 auto;
-  background: #fff url("../img/guide/leading-10.png");
+  background-color: #fff;
+  /*background: #fff url("../img/guide/leading-10.png");*/
   font-family: "Varela Round", sans-serif;
   color: #222;
 }
@@ -246,4 +247,98 @@ ul {
   top: 0;
   left: 0;
 }
+
+/* banner */
+[class*="banner-"]{
+  height: 240px;
+}
+
+.banner-women {
+  background: url(../img/assets/photo-banners-01.png) no-repeat;
+  background-size: cover;
+}
+
+.banner-men {
+  background: url(../img/assets/photo-banners-02.png) no-repeat;
+  background-size: cover;
+}
+
+.banner-acc {
+  background: url(../img/assets/photo-banners-03.png) no-repeat;
+  background-size: cover;
+}
+
+/* featured */
+[class*="featured-"] {
+  height: 240px;
+  outline: 1px solid #ececec;
+  background: #fff;
+}
+
+.featured-1 {
+
+}
+
+/* blog */
+.blog {
+  outline: 1px solid #ececec;
+  background: #fff;
+}
+.blog-1, .blog-2, .blog-3 {
+  height: 240px;
+}
+
+.blog-4-1, .blog-4-2 {
+  height: 120px;
+}
+
+.blog-2 {
+  background: url(../img/assets/photo-blog.png) no-repeat;
+  background-size: cover;
+}
+
+/*testimonials, about */
+.testimonials, .about {
+  height: 480px;
+  box-sizing: border-box;
+  background: #fff;
+}
+
+.testimonials {
+  border-right: 1px solid #ececec;
+}
+
+/* brands */
+[class*="brands-"] {
+  height: 120px;
+  background: #fff;
+  outline: 1px solid #ececec;
+}
+
 /* END MAIN */
+.footer-1 {
+  height: 60px;
+  background: #222;
+  border-bottom: 1px solid #353535;
+  box-sizing: border-box;
+}
+.footer-1 ul {
+  margin-left: 70px;
+}
+.footer-1 ul li {
+  display: inline-block;
+}
+.footer-1 li a {
+  text-transform: capitalize;
+  color: #fff;
+  margin-right: 70px;
+  font-size: 14px;
+  background: url(../img/assets/icon-imdel-point.png);
+}
+.footer-2 {
+  height: 120px;
+  background: #222;
+}
+/* FOOTER */
+
+/* END FOOTER */
