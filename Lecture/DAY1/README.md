@@ -2,13 +2,6 @@
 
 # DAY 01
 
-### 1. PSD to HTML/CSS
-
-디자인 리소스: [Article.psd](../Resources/Article.psd)
-
-![D1-psd](../Assets/D1-psd.png)
-
----
 
 ## 김혜일 접근성 품질관리 테스터 특강: 접근성 준수
 
