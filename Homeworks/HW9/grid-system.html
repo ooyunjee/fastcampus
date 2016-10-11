@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Grid System</title>
+  <link rel="stylesheet" href="css/gs-1380-14-87-14.css">
+  <script type="text/javascript">
+    function calcWidth(colNum) {
+      return (87 * colNum + ( (14*2) * (colNum - 1)));
+    }
+    for(var i=1 ; i<=12 ; i++) {
+      console.log(calcWidth(i));
+    }
+    console.log();
+  </script>
+</head>
+<body>
+  <div class="container show-grid">
+    <div class="row">
+      <div class="box col-1 align-center">yunjee 1</div>
+      <div class="box col-1 align-center">yunjee 2</div>
+      <div class="box col-1 align-center">yunjee 3</div>
+      <div class="box col-1 align-center">yunjee 4</div>
+      <div class="box col-1 align-center">yunjee 5</div>
+      <div class="box col-1 align-center">yunjee 6</div>
+      <div class="box col-1 align-center">yunjee 7</div>
+      <div class="box col-1 align-center">yunjee 8</div>
+      <div class="box col-1 align-center">yunjee 9</div>
+      <div class="box col-1 align-center">yunjee 10</div>
+      <div class="box col-1 align-center">yunjee 11</div>
+      <div class="box col-1 align-center">yunjee 12</div>
+    </div>
+    <div class="row">
+      <div class="box col-2 align-center">yunjee 1</div>
+      <div class="box col-2 align-center">yunjee 2</div>
+      <div class="box col-2 align-center">yunjee 3</div>
+      <div class="box col-2 align-center">yunjee 4</div>
+      <div class="box col-2 align-center">yunjee 5</div>
+      <div class="box col-2 align-center">yunjee 6</div>
+    </div>
+  </div>
+</body>
+</html>

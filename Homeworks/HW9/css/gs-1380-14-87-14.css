@@ -1,0 +1,295 @@
+/*
+* 페이지 폭: 1380px
+* 컬럼 개수 :12개
+* 컬럼 폭: 87px
+* 거터 폭: 14 * 2px
+*
+*/
+
+body {
+  margin: 0;
+  background: #eee;
+}
+
+/*
+* ---------------------------
+* Module: Container
+* ---------------------------
+*/
+.container {
+  width: 1380px;
+  margin: 0 auto;
+  background: #fff;
+}
+
+/*
+* ---------------------------
+* Module: Row
+* ---------------------------
+*/
+.row::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.lt-ie8 .row { zoom: 1; }
+
+/*
+* ---------------------------
+* Module: Column
+* ---------------------------
+*/
+[class*="col-"] {
+  /* 수평 레이아웃 */
+  float: left;
+  margin-left: 14px; margin-right: 14px;
+}
+
+.col-1  { width : 87px;  }
+.col-2  { width : 202px; /* y = 87 * x + ( (14*2) * (x - 1)) */ }
+.col-3  { width : 317px; }
+.col-4  { width : 432px; }
+.col-5  { width : 547px; }
+.col-6  { width : 662px; }
+.col-7  { width : 777px; }
+.col-8  { width : 892px; }
+.col-9  { width : 1007px; }
+.col-10 { width : 1122px; }
+.col-11 { width : 1237px; }
+.col-12 { width : 1352px; }
+
+/*
+* ---------------------------
+* Module: Push, Pull
+* ---------------------------
+*/
+[class*="push-"],
+[class*="pull-"] {
+  position: relative;
+}
+
+.push-1 { left: 115px; }
+.push-2 { left: 230px; }
+.push-3 { left: 345px; }
+.push-4 { left: 460px; }
+.push-5 { left: 575px; }
+.push-6 { left: 690px; }
+.push-7 { left: 805px; }
+.push-8 { left: 920px; }
+
+.pull-1 { right: 115px; }
+.pull-2 { right: 230px; }
+.pull-3 { right: 345px; }
+.pull-4 { right: 460px; }
+.pull-5 { right: 575px; }
+.pull-6 { right: 690px; }
+.pull-7 { right: 805px; }
+.pull-8 { right: 920px; }
+
+/*
+* ---------------------------
+* Module: preifx, suffix
+* ---------------------------
+*/
+.prefix-1 { margin-left: 120px; }
+.prefix-2 { margin-left: 240px; }
+.prefix-3 { margin-left: 360px; }
+.prefix-4 { margin-left: 480px; }
+.prefix-5 { margin-left: 600px; }
+.prefix-6 { margin-left: 720px; }
+.prefix-7 { margin-left: 840px; }
+.prefix-8 { margin-left: 960px; }
+
+.suffix-1 { margin-right: 120px; }
+.suffix-2 { margin-right: 240px; }
+.suffix-3 { margin-right: 360px; }
+.suffix-4 { margin-right: 480px; }
+.suffix-5 { margin-right: 600px; }
+.suffix-6 { margin-right: 720px; }
+.suffix-7 { margin-right: 840px; }
+.suffix-8 { margin-right: 960px; }
+
+/*
+* --------------------------
+* Box
+* --------------------------
+*/
+.box {
+  height: 200px;
+}/*
+* 페이지 폭: 1380px
+* 컬럼 개수 :12개
+* 컬럼 폭: 87px
+* 거터 폭: 14 * 2px
+*
+*/
+
+body {
+  margin: 0;
+  background: #eee;
+}
+
+/*
+* ---------------------------
+* Module: Container
+* ---------------------------
+*/
+.container {
+  width: 1380px;
+  margin: 0 auto;
+  background: #fff;
+}
+.container.show-grid {
+  background-image: linear-gradient(180deg, transparent 9px, #7a7a7a 9px), linear-gradient(90deg, transparent 14px, hsla(0, 36%, 75%, 0.26) 14px, 101px, transparent 101px );
+  background-size: 1px 10px, 115px 1px;
+}
+
+/*
+* ---------------------------
+* Module: Row
+* ---------------------------
+*/
+.row::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.lt-ie8 .row { zoom: 1; }
+
+/*
+* ---------------------------
+* Module: Column
+* ---------------------------
+*/
+[class*="col-"] {
+  /* 수평 레이아웃 */
+  float: left;
+  margin-left: 14px; margin-right: 14px;
+}
+
+.col-1  { width : 87px;  }
+.col-2  { width : 202px; /* y = 87 * x + ( (14*2) * (x - 1)) */ }
+.col-3  { width : 317px; }
+.col-4  { width : 432px; }
+.col-5  { width : 547px; }
+.col-6  { width : 662px; }
+.col-7  { width : 777px; }
+.col-8  { width : 892px; }
+.col-9  { width : 1007px; }
+.col-10 { width : 1122px; }
+.col-11 { width : 1237px; }
+.col-12 { width : 1352px; }
+
+/*
+* ---------------------------
+* Module: Push, Pull
+* ---------------------------
+*/
+[class*="push-"],
+[class*="pull-"] {
+  position: relative;
+}
+
+.push-1 { left:  115px; }
+.push-2 { left:  230px; }
+.push-3 { left:  345px; }
+.push-4 { left:  460px; }
+.push-5 { left:  575px; }
+.push-6 { left:  690px; }
+.push-7 { left:  805px; }
+.push-8 { left:  920px; }
+.push-9 { left:  1035px; }
+.push-10 { left: 1150px; }
+.push-11 { left: 1265px; }
+.push-12 { left: 1380px; }
+
+.pull-1 { right: 115px; }
+.pull-2 { right: 230px; }
+.pull-3 { right: 345px; }
+.pull-4 { right: 460px; }
+.pull-5 { right: 575px; }
+.pull-6 { right: 690px; }
+.pull-7 { right: 805px; }
+.pull-8 { right: 920px; }
+.push-9 { right:  1035px; }
+.push-10 { right: 1150px; }
+.push-11 { right: 1265px; }
+.push-12 { right: 1380px; }
+
+
+/*
+* ---------------------------
+* Module: preifx, suffix
+* ---------------------------
+*/
+.prefix-1  { margin-left: 115px; }
+.prefix-2  { margin-left: 230px; }
+.prefix-3  { margin-left: 345px; }
+.prefix-4  { margin-left: 460px; }
+.prefix-5  { margin-left: 575px; }
+.prefix-6  { margin-left: 690px; }
+.prefix-7  { margin-left: 805px; }
+.prefix-8  { margin-left: 920px; }
+.prefix-9  { margin-left: 1035px; }
+.prefix-10 { margin-left: 1150px; }
+.prefix-11 { margin-left: 1265px; }
+.prefix-12 { margin-left: 1380px; }
+
+.suffix-1 { margin-right:  115px; }
+.suffix-2 { margin-right:  230px; }
+.suffix-3 { margin-right:  345px; }
+.suffix-4 { margin-right:  460px; }
+.suffix-5 { margin-right:  575px; }
+.suffix-6 { margin-right:  690px; }
+.suffix-7 { margin-right:  805px; }
+.suffix-8 { margin-right:  920px; }
+.suffix-9  { margin-right: 1035px; }
+.suffix-10 { margin-right: 1150px; }
+.suffix-11 { margin-right: 1265px; }
+.suffix-12 { margin-right: 1380px; }
+
+/*
+* --------------------------
+* Box
+* --------------------------
+*/
+.box {
+  height: 200px;
+}
+.box:nth-child(1) {
+  background: #cc9b9b;
+}
+.box:nth-child(2n) {
+  background: #a47e7e;
+}
+.box:nth-child(3n) {
+  background: #7e6161;
+}
+.box:nth-child(5n) {
+  background: #664e4e;
+}
+.box:nth-child(7n) {
+  background: #473737;
+}
+.box:nth-child(11n) {
+  background: #342929;
+}
+
+.box:nth-child(1) {
+  background: #cc9b9b;
+}
+.box:nth-child(2n) {
+  background: #a47e7e;
+}
+.box:nth-child(3n) {
+  background: #7e6161;
+}
+.box:nth-child(5n) {
+  background: #664e4e;
+}
+.box:nth-child(7n) {
+  background: #473737;
+}
+.box:nth-child(11n) {
+  background: #342929;
+}
