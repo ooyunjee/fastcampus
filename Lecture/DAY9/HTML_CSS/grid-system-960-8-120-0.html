@@ -14,26 +14,136 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="lib/gs-960-8-120-0.css">
   <style media="screen">
-  .box {
-    height: 200px;
-  }
-  .box:nth-child(1) {
+  /*.col-1 {
+    position: relative;
+    z-index: 0;
     background: #cc9b9b;
+    color: #fff;
   }
-  .box:nth-child(2n) {
-    background: #a3d0a5;
+  .col-1::after {
+    content: '';
+    background: #b88888;
+    position: absolute;
+    top: 0;
+    right: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: all 1s ease-in-out;
   }
-  .box:nth-child(3n) {
-    background: #8199da;
+  .col-1:hover::after {
+    right: 0;
   }
+  .col-2 {
+    position: relative;
+    z-index: 0;
+  }*/
   </style>
 </head>
 <body>
   <div class="container show-grid">
     <div class="row">
-      <div class="box col-1"></div>
-      <div class="box col-2"></div>
-      <div class="box col-5"></div>
+      <div class="box col-1 push-6 align-center">yunjee 1</div>
+      <div class="box col-1 pull-2 align-center">yunjee 2</div>
+      <div class="box col-1 push-5 align-center">yunjee 3</div>
+      <div class="box col-1 pull-2 align-center">yunjee 4</div>
+      <div class="box col-1 align-center">yunjee 5</div>
+      <div class="box col-1 align-center">yunjee 6</div>
+      <div class="box col-1 align-center">yunjee 7</div>
+      <div class="box col-1 align-center">yunjee 8</div>
+    </div>
+    <div class="row">
+      <div class="box col-2 align-center">yunjee</div>
+      <div class="box col-2 align-center">yunjee</div>
+      <div class="box col-2 align-center">yunjee</div>
+      <div class="box col-2 align-center">yunjee</div>
+    </div>
+    <div class="row">
+      <div class="box col-3 pull-1 align-center">yunjee</div>
+      <div class="box col-1 align-center">yunjee</div>
+      <div class="box col-3 align-center">yunjee</div>
+      <div class="box col-1 push-1 align-center">yunjee</div>
+    </div>
+    <div class="row">
+      <div class="box col-4 align-center">yunjee</div>
+      <div class="box col-4 align-center">yunjee</div>
+    </div>
+  </div>
+
+  <div class="container show-grid">
+    <div class="row">
+      <div class="box2 col-1 align-center">yunjee 1</div>
+      <div class="box2 col-1 align-center">yunjee 2</div>
+      <div class="box2 col-1 align-center">yunjee 3</div>
+      <div class="box2 col-1 align-center">yunjee 4</div>
+      <div class="box2 col-1 align-center">yunjee 5</div>
+      <div class="box2 col-1 align-center">yunjee 6</div>
+      <div class="box2 col-1 align-center">yunjee 7</div>
+      <div class="box2 col-1 align-center">yunjee 8</div>
+    </div>
+    <div class="row">
+      <div class="box2 push-1 col-2 align-center">yunjee 1</div>
+      <div class="box2 push-3 col-2 align-center">yunjee 2</div>
+    </div>
+    <div class="row">
+      <div class="box2 push-2 col-1 align-center">yunjee 1</div>
+      <div class="box2 push-2 col-1 align-center">yunjee 2</div>
+      <div class="box2 push-2 col-1 align-center">yunjee 3</div>
+      <div class="box2 push-2 col-1 align-center">yunjee 4</div>
+    </div>
+    <div class="row">
+      <div class="box2 push-3 col-1 align-center">yunjee 1</div>
+      <div class="box2 push-3 col-1 align-center">yunjee 2</div>
+    </div>
+  </div>
+
+  <div class="container show-grid">
+    <div class="row">
+      <div class="box2 col-1 align-center">yunjee 1</div>
+      <div class="box2 col-1 align-center">yunjee 2</div>
+      <div class="box2 col-1 align-center">yunjee 3</div>
+      <div class="box2 col-1 align-center">yunjee 4</div>
+      <div class="box2 col-1 align-center">yunjee 5</div>
+      <div class="box2 col-1 align-center">yunjee 6</div>
+      <div class="box2 col-1 align-center">yunjee 7</div>
+      <div class="box2 col-1 align-center">yunjee 8</div>
+    </div>
+    <div class="row">
+      <div class="box2 push-1 col-1 align-center">yunjee 1</div>
+      <div class="box2 push-2 col-1 align-center">yunjee 2</div>
+      <div class="box2 push-3 col-1 align-center">yunjee 3</div>
+      <div class="box2 push-4 col-1 align-center">yunjee 4</div>
+    </div>
+    <div class="row">
+      <div class="box2 push-3 col-1 align-center">yunjee 1</div>
+      <div class="box2 push-1 col-1 align-center">yunjee 2</div>
+      <div class="box2 pull-1 col-1 align-center">yunjee 3</div>
+      <div class="box2 pull-3 col-1 align-center">yunjee 4</div>
+    </div>
+  </div>
+
+  <div class="container show-grid">
+    <div class="row">
+      <div class="box2 col-1 align-center">yunjee 1</div>
+      <div class="box2 col-1 align-center">yunjee 2</div>
+      <div class="box2 col-1 align-center">yunjee 3</div>
+      <div class="box2 col-1 align-center">yunjee 4</div>
+      <div class="box2 col-1 align-center">yunjee 5</div>
+      <div class="box2 col-1 align-center">yunjee 6</div>
+      <div class="box2 col-1 align-center">yunjee 7</div>
+      <div class="box2 col-1 align-center">yunjee 8</div>
+    </div>
+    <div class="row">
+      <div class="box2 suffix-1 col-1 align-center">yunjee 1</div>
+      <div class="box2 suffix-1 col-1 align-center">yunjee 2</div>
+      <div class="box2 suffix-1 col-1 align-center">yunjee 3</div>
+      <div class="box2 col-1 align-center">yunjee 4</div>
+    </div>
+    <div class="row">
+      <div class="box2 prefix-1 suffix-1 col-1 align-center">yunjee 1</div>
+      <div class="box2 suffix-1 col-1 align-center">yunjee 2</div>
+      <div class="box2 suffix-1 col-1 align-center">yunjee 3</div>
+      <div class="box2 col-1 align-center">yunjee 4</div>
     </div>
   </div>
 </body>

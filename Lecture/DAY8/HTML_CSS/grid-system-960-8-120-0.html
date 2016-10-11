@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--[if !IE]><!-->
+  <html lang="ko-KR">
+<!--<![endif]-->
+<!--[if IE 6]><html lang="ko-KR" class="lt-ie10 lt-ie9 lt-ie8 ie6"><![endif]-->
+<!--[if IE 7]><html lang="ko-KR" class="lt-ie10 lt-ie9 lt-ie8 ie7"><![endif]-->
+<!--[if IE 8]><html lang="ko-KR" class="lt-ie10 lt-ie9 ie8"><![endif]-->
+<!--[if IE 9]><html lang="ko-KR" class="lt-ie10 ie9 "><![endif]-->
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>using CSS grid System 960px (8 Columns, 0 Gutter)</title>
+  <link href="http://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css" rel="stylesheet" type="text/css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="lib/gs-960-8-120-0.css">
+  <style media="screen">
+  .box {
+    height: 200px;
+  }
+  .box:nth-child(1) {
+    background: #cc9b9b;
+  }
+  .box:nth-child(2n) {
+    background: #a3d0a5;
+  }
+  .box:nth-child(3n) {
+    background: #8199da;
+  }
+  </style>
+</head>
+<body>
+  <div class="container show-grid">
+    <div class="row">
+      <div class="box col-1"></div>
+      <div class="box col-2"></div>
+      <div class="box col-5"></div>
+    </div>
+  </div>
+</body>
+</html>

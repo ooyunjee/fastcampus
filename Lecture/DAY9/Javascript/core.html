@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>자바스크립트 이벤트 핸들링</title>
+  <link rel="stylesheet" href="css/gs-960-8-120-0.css">
+  <style>
+  .toggle-btn-set {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    padding: 1rem;
+    background: #000;
+    color: #fff;
+    opacity: 0.5;
+  }
+
+  .toggle-btn-set button {
+    cursor: pointer;
+    /*border: none;*/
+    padding: 0.7rem 1.4rem;
+    color: inherit;
+    background: #787878;
+    outline: none;
+  }
+  .toggle-btn-set button:hover {
+    background: #575656;
+  }
+  .btn--show-grid {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-right: 1px solid #c6c6c6;
+    border-left: 0;
+    border-top: 0;
+    border-bottom: 0;
+  }
+  .btn--hide-grid {
+    border: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="toggle-btn-set" role="group">
+      <button type="button" class="btn--show-grid">show grid</button>
+      <button type="button" class="btn--hide-grid">hide grid</button>
+    </div>
+  </div>
+
+  <script src="js/core.js"></script>
+</body>
+</html>
