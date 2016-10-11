@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>고정 형태의 그리드 시스템을 유동 형태의 그리드 시스템으로 변경</title>
+  <link rel="stylesheet" href="../../../grid-system/fluid-gs-1380-14-87-14.css" media="screen" title="no title">
+  <style>
+    .container {
+      width: 80%;
+      min-height: 100vh;
+    }
+    .row {
+      margin-bottom: 20px;
+    }
+    .box {
+      height: 100px;
+      background: #333;
+      color: #fff;
+    }
+    .maestro {
+      background: url(img/maestro.jpg) no-repeat center;
+      padding-bottom: 71.08%; /* 543(가로) / 740(세로) * 100 % */
+    }
+    .responsive-crop {
+      background: url(img/maestro-2.png) no-repeat center top;
+      background-size: cover;
+      width: 100%;
+      height: 500px;
+      height: 100vh;
+    }
+    .responsive-crop-container {
+      position: relative;
+      height: 200px;
+    }
+    .responsive-crop-content {
+      position: absolute;
+      left: 50%;
+      width: 100%;
+      height: auto;
+      transform: translateX(-50%);
+    }
+  </style>
+  <script src="../../../grid-system/gs-utils.js"></script>
+  <script src="fluid.js"></script>
+</head>
+<body>
+  <div class="responsive-crop" role="img"></div>
+  <div class="container fluid">
+    <div class="row">
+      <div class="box col-6"></div>
+      <div class="box col-6"></div>
+    </div>
+    <div class="row">
+      <div class="box col-3">
+        <img class="rwd-img" src="http://placehold.it/900x400/fe4940/fff" alt="" width="900" height="400">
+      </div>
+      <div class="box col-3"></div>
+      <div class="box col-4">
+        <div class="maestro rwd-bg" role="img" aria-lable="디스코의 상징, 전설적인 작곡가 조지오 모로더"></div>
+      </div>
+      <div class="box col-2"></div>
+    </div>
+    <div class="row">
+      <div class="col-3 responsive-crop-container">
+        <img class="responsive-crop-content" src="img/maestro-2.png" alt="">
+      </div>
+    </div>
+  </div>
+</body>
+</html>
