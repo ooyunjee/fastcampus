@@ -151,7 +151,7 @@ body {
 * Box
 * --------------------------
 */
-.box {
+/*.box {
   height: 200px;
 }
 .box:nth-child(1) {
@@ -171,4 +171,4 @@ body {
 }
 .box:nth-child(11n) {
   background: #342929;
-}
+}*/
