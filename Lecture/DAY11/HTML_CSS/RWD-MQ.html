@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>RWD, Media Query</title>
+  <style media="screen">
+    body {
+      margin: 0;
+    }
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #d59494;
+      color: #ecc1c1;
+      font-size: 48px;
+    }
+    body::before {
+      content: 'Mobile';
+    }
+
+    /* only: 하위브라우저가 코드를 읽지 못하게 하기 위함. */
+    @media screen and (min-width: 768px) and (max-width: 1024px){
+      body {
+        background: #85bbc7;
+        color: #a9d7e2;
+      }
+      body::before {
+        content: 'Tablet';
+      }
+    }
+
+    @media screen and (min-width: 1025px) {
+      body {
+        background: #858ec7;
+        color: #b7beeb;
+      }
+      body::before {
+        content: 'Desktop';
+      }
+    }
+  </style>
+</head>
+<body>
+
+</body>
+</html>
