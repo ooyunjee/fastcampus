@@ -24,7 +24,7 @@
       padding-bottom: 71.08%; /* 543(가로) / 740(세로) * 100 % */
     }
     .responsive-crop {
-      background: url(img/maestro-2.png) no-repeat center top;
+      background: url(img/london.jpg) no-repeat center top;
       background-size: cover;
       width: 100%;
       height: 500px;
@@ -33,13 +33,22 @@
     .responsive-crop-container {
       position: relative;
       height: 200px;
+      overflow: hidden;
     }
     .responsive-crop-content {
       position: absolute;
-      left: 50%;
+      /*left: 50%;*/
       width: 100%;
       height: auto;
-      transform: translateX(-50%);
+      /*transform: translateX(-50%);*/
+      transform: scale(1);
+      filter: blur(3px);
+	    transition: transform .3s ease-in-out, filter .8s ease-in-out;
+    }
+    .responsive-crop-content:hover {
+      cursor: pointer;
+      transform: scale(1.2);
+      filter: blur(0);
     }
   </style>
   <script src="../../../grid-system/gs-utils.js"></script>
@@ -49,7 +58,7 @@
   <div class="responsive-crop" role="img"></div>
   <div class="container fluid">
     <div class="row">
-      <div class="box col-6"></div>
+      <div class="box col-6">yunjee</div>
       <div class="box col-6"></div>
     </div>
     <div class="row">
