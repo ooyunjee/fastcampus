@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  .tooltip {
+    width: 100px;
+    height: 100px;
+    background: #edacac;
+  }
+  .tooltip-content {
+    display: none;
+  }
+  .tooltip:hover .tooltip-content,
+  .tooltip:focus .tooltip-content {
+    display: block;
+  }
+  </style>
+</head>
+<body>
+  <a href aria-haspopup="true" role="tooltip" class="tooltip">
+    구독게시판 새 글 소식
+    <span class="tooltip-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, inventore.</span>
+  </a>
+
+  <script type="text/javascript">
+  var tooltip = document.querySelector('.tooltip');
+
+  tooltip.onkeydown = function(ev) {
+    if(ev.keyCode === 27){
+      tooltip.querySelector('.tooltip-content').style.display = 'none';
+    }
+  };
+  </script>
+</body>
+</html>
