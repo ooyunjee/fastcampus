@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSS Layout</title>
+  <link rel="stylesheet" href="../../Modules/CSS/initialization/normalize.css" media="screen" title="no title">
+  <style media="screen">
+    .bg-test {
+      height: 100vh;
+      background: #ccc;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .detect-DPR {
+      width: 200px;
+      height: 100px;
+      margin-right: 20px;
+      background: url("images/board-girlx1.jpg") no-repeat;
+    }
+
+    .detect-DPRx2 {
+      width: 200px;
+      height: 100px;
+    }
+
+    @media
+    (-webkit-min-device-pixel-ratio: 2),
+    (min--moz-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) { /* 표준 */
+      .detect-DPRx2 {
+        background-image: url("images/board-girlx2.jpg");
+        background-size: 400px 273px;
+      }
+    }
+    /*.detect-DPR.x2 {
+      width: 200px;
+      height: 200px;
+    }
+
+    .bg {
+      background: url("images/board-girlx1.jpg") no-repeat;
+      background-size: cover;
+    }
+    .bg.x2 {
+      background: url("images/board-girlx2.jpg") no-repeat;
+    }*/
+  </style>
+</head>
+<body>
+  <div class="bg-test">
+    <div class="detect-DPR"></div>
+    <div class="detect-DPRx2"></div>
+  </div>
+
+  <div><img src="images/map.png" alt="Map"></div>
+  <div><img src="images/map@2x.png" alt="Map" width="256" height="208" ></div>
+
+  <div>
+    <img src="images/map.png"
+         srcset="images/map.png 1x, images/map@2x.png 2x"
+         alt="Map">
+  </div>
+</body>
+</html>

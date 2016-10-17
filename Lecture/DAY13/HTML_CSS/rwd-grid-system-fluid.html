@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mobile First Grid System</title>
+  <!-- 모바일 최적화 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS 모듈 로드 -->
+  <link rel="stylesheet" href="../../Modules/CSS/initialization/normalize.css" media="screen" title="no title">
+  <link rel="stylesheet" href="../../Modules/CSS/grid-system-mobile-first.css" media="screen" title="no title">
+  <style>
+  html {
+    background: #fff;
+  }
+  .app {
+    min-height: 100vh;
+    background: url("http://alistapart.com/d/_made/d/misc-images/rwd-4_450_736_81.jpg") no-repeat center bottom;
+    color: #332e24;
+    /*padding-top: 10px;*/
+    /* 자식인 h1의 마진 값이 부모 영역에 영향을 주어 바깥으로 나온다. 이를 해결하기 위해서는 부모 영역에 마진이나 패딩을 주면 된다. */
+  }
+  .app * {
+    margin-top: 0;
+  }
+
+  .app .row :nth-child(2n+1) {
+    /*background: #fff;*/
+    color: #332e24;
+    margin-bottom: 10px;
+  }
+
+  @media only screen and (min-width: 768px) {
+    .app {
+      background-image: url("http://alistapart.com/d/_made/d/misc-images/rwd-3_1500_1078_81.jpg");
+      background-size: contain;
+    }
+  }
+  </style>
+</head>
+<body>
+  <div class="app container show-grid">
+    <div class="row">
+      <div class="column m1-4 t2-8 d-full">
+        <h1 lang="en">Mobile First</h1>
+      </div>
+      <div class="column m3-4 t6-8 d3-12">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, laudantium. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe, laudantium.</p>
+      </div>
+    </div>
+    <!-- <div class="row">
+      <div class="column m1-4 t3-8 d1-12">column m1-4 t3-8 d1-12</div>
+      <div class="column m2-4 t4-8 d9-12">column m2-4 t4-8</div>
+      <div class="column m1-4 t1-8 d2-12">column m1-4 t1-8</div>
+    </div>
+    <div class="row">
+      <div class="column m3-4 t6-8 d3-12">column m3-4 t6-8</div>
+      <div class="column m1-4 t2-8 d9-12">column m1-4 t2-8</div>
+    </div> -->
+  </div>
+</body>
+</html>
