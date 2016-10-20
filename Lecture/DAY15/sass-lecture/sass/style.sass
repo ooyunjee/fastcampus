@@ -1,0 +1,104 @@
+/*
+  This is sass syntax.
+
+
+html
+  overflow-y: visible
+  color: #fff
+
+body
+  margin: 0
+
+.demo
+  width: 70%
+  margin:
+    left: auto
+    right: auto
+  padding: 4rem
+
+.test
+  color: #7294ab
+  text-align: center
+
+  strong
+    font-size: 3em
+
+nav
+  float: right
+  li
+    float: left
+    a
+      color: #666
+      &:hover
+        color: #333
+    &.current
+      font-weight: bold
+
+nav#gnb
+  // 모바일
+  @media screen and (max-width: 40em)
+    display: flex
+  // 데스크탑
+  @media screen and (min-width: 75em)
+    display: none
+  .show-grid &
+    display: block
+  ul
+    flex:
+      grow: 1
+      shrink: 0
+      basis: 200px
+    margin:
+      top: 0
+      bottom: 0
+    list-style-type: none
+    padding-left: 0
+  li
+    float: left
+    margin-right: 20px
+    &.current
+      background: #ff0
+  a
+    color: #333
+    &:hover,
+    &:focus
+      color: #808080
+
+// 선택자 상속
+// 비공개 private module : %
+%flex-center-middle
+  display: flex
+  justify-content: center
+  align-items: center
+%box
+  @extend %flex-center-middle
+  width: 100px
+  height: 100px
+.box-black
+  @extend %box
+  background: #000
+.box-red
+  @extend %box
+  background: #f00
+.box-green
+  @extend %box
+  background: #0f0
+.box-blue
+  @extend %box
+  background: #00f
+
+%reset-list
+  margin:
+    top: 0
+    bottom: 0
+  padding-left: 0
+  list-style: none
+
+nav#gnb
+  ul
+    @extend %reset-list
+main
+  nav#lnb ul
+    @extend %reset-list
+.footer nav ul
+  @extend %reset-list

@@ -1,0 +1,123 @@
+/*
+  This is sass syntax. */
+html {
+  overflow-y: visible;
+  color: #fff;
+}
+
+body {
+  margin: 0;
+}
+
+.demo {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 4rem;
+}
+
+.test {
+  color: #7294ab;
+  text-align: center;
+}
+
+.test strong {
+  font-size: 3em;
+}
+
+nav {
+  float: right;
+}
+
+nav li {
+  float: left;
+}
+
+nav li a {
+  color: #666;
+}
+
+nav li a:hover {
+  color: #333;
+}
+
+nav li.current {
+  font-weight: bold;
+}
+
+@media screen and (max-width: 40em) {
+  nav#gnb {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 75em) {
+  nav#gnb {
+    display: none;
+  }
+}
+
+.show-grid nav#gnb {
+  display: block;
+}
+
+nav#gnb ul {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 200px;
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+nav#gnb li {
+  float: left;
+  margin-right: 20px;
+}
+
+nav#gnb li.current {
+  background: #ff0;
+}
+
+nav#gnb a {
+  color: #333;
+}
+
+nav#gnb a:hover, nav#gnb a:focus {
+  color: #808080;
+}
+
+.box-black, .box-red, .box-green, .box-blue {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-black, .box-red, .box-green, .box-blue {
+  width: 100px;
+  height: 100px;
+}
+
+.box-black {
+  background: #000;
+}
+
+.box-red {
+  background: #f00;
+}
+
+.box-green {
+  background: #0f0;
+}
+
+.box-blue {
+  background: #00f;
+}
+
+nav#gnb ul, main nav#lnb ul, .footer nav ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
