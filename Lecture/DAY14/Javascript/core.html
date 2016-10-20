@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style media="screen">
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    
+    .btn {
+      background: #eee;
+      border: 0;
+      padding: 1.2em 1em;
+      border-radius: 5px;
+      color: #383838;
+      cursor: pointer;
+      width: 10em;
+    }
+    
+    .btn:focus {
+      outline: 0;
+    }
+    
+    .btn:active {
+      position: relative;
+      top: 2px;
+    }
+    
+    .btn-normal {
+      background: #eee;
+    }
+    
+    .btn.pressed {
+      background: #e3b2b8;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <button type="button" class="btn btn-normal">Normal State</button>
+  </div>
+
+  <script src="core.js" charset="utf-8"></script>
+</body>
+</html>

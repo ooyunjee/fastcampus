@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mobile First Grid System</title>
+  <!-- 모바일 최적화 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS 모듈 로드 -->
+  <link rel="stylesheet" href="../../Modules/CSS/initialization/normalize.css" media="screen" title="no title">
+  <link rel="stylesheet" href="../../Modules/CSS/grid-system-mobile-first-fix-count.css" media="screen" title="no title">
+  <link rel="stylesheet" href="../../Modules/CSS/rwd.css" media="screen" title="no title">
+  <style>
+  .box { height: 70px; margin-top: 10px;}
+  .box:nth-of-type(1) { background: #e28b8b;}
+  .box:nth-of-type(2n) { background: #f4c4a3;}
+  .box:nth-of-type(3n) { background: #fbfaa7;}
+  .box:nth-of-type(4n) { background: #8bcae2;}
+  </style>
+</head>
+<body>
+  <div class="container adaptive show-grid">
+    <div class="row gutter-after">
+      <div class="column box m-2 m-push-2 t-4 d-6">1</div>
+      <div class="column box m-2 m-pull-2 t-4 d-6">2</div>
+    </div>
+    <div class="row gutter-before">
+      <div class="column box m-2 m-push-2 t-4 d-6">1</div>
+      <div class="column box m-2 m-pull-2 t-4 d-6">2</div>
+    </div>
+    <div class="row gutters">
+      <div class="column box m-2 m-push-2 t-4 d-6">1</div>
+      <div class="column box m-2 m-pull-2 t-4 d-6">2</div>
+    </div>
+    <div class="row">
+      <div class="column box m-hidden t-hidden d-1">5</div>
+      <div class="column box m-full t-full d-6">3</div>
+      <div class="column box m-hidden t-full d-5">4</div>
+    </div>
+  </div>
+</body>
+</html>

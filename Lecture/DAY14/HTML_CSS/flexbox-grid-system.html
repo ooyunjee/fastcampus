@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSS Flexible Box Grid System</title>
+  <!-- 모바일 최적화 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- CSS 모듈 로드 -->
+  <link rel="stylesheet" href="../../Modules/CSS/initialization/normalize.css">
+  <link rel="stylesheet" href="../../Modules/CSS/grid-system-using-flexbox.css">
+  <link rel="stylesheet" href="../../Modules/CSS/rwd.css">
+  <style>
+  .box:first-child { background: #ddacac; }
+  .box:nth-child(2) { background: #f6eab5; }
+  .box:nth-child(3) { background: #dbf6b5; }
+  .box:nth-child(4) { background: #b5bdf6; }
+  .box:nth-child(5) { background: #dbb5f6; }
+  .box:nth-child(6) { background: #f6b5d2; }
+  </style>
+</head>
+<body>
+  <div class="grid-container">
+    <div class="grid grid-gutters">
+      <div class="box cell cell-center">grid cell</div>
+      <div class="box cell cell-bottom">grid cell</div>
+      <div class="box cell cell-top">grid cell</div>
+      <div class="box cell">grid cell Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, nostrum?</div>
+      <div class="box cell">grid cell Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, nostrum?</div>
+      <div class="box cell">grid cell Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, nostrum?</div>
+    </div>
+  </div>
+</body>
+</html>
