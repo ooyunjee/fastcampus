@@ -1,0 +1,157 @@
+// 믹스인(코드를 섞어 생성한 것을 붙일 수 있도록..)
+// ```scss
+// @mixin transition($매개변수: 초기값) {
+//  -webkit-transition: $매개변수;
+//  -moz-transition: $매개변수;
+//  -o-transition: $매개변수;
+//  transition: $매개변수;
+// }
+//
+// body {
+//  @include transition(전달인자);
+// }
+// ```
+//
+// @mixin     =
+// @include   +
+//
+// ```sass
+// =transition($매개변수: 초기값)
+//  -webkit-transition: $매개변수
+//  -moz-transition: $매개변수
+//  -o-transition: $매개변수
+//  transition: $매개변수
+//
+//
+// body
+//  +transition(전달인자)
+//
+// ```
+//
+// placeholder, mixin
+// p: 코드가 정해져있음
+// m: 인자에 따라 바뀔 수 있음
+
+// placeholder selector %
+// p: 이 코드 모듈을 사용하는 선택자를 끌어올린다.
+// m: mixin을 사용하는 선택자에 mixin 코드들이 붙는다.
+
+// **키워드 전달 인자**
+// 특정 키워드를 사용해서 해당 키워드 부분의 속성만 바꿔준다.
+// 전달인자의 순서를 기억하기 힘들기 때문이 사용
+//
+// 멀티전달인자, 유지보수문제
+// $args...: 집합, list parameter
+
+//
+@import mixins
+@import placeholders
+@import functions
+
+
+// =transition($property: all, $duration: 400ms, $easing-function: linear, $delay: null)
+//   -webkit-transition: $property $duration $easing-function $delay
+//   -moz-transition: $property $duration $easing-function $delay
+//   -o-transition: $property $duration $easing-function $delay
+//   transition: $property $duration $easing-function $delay
+//
+// // mixin 조건 처리 가능,
+// =clearfix($support-ie: true)
+//   @extend %clearfix
+//   @if $support-ie
+//     .lt-ie8 &
+//       zoom: 1
+//
+//   // &::after
+//   //   content: ''
+//   //   display: block
+//   //   clear: both
+//
+// // 키워드
+// =hover-link($padding-bottom: 2px, $border-bottom: 1px solid tomato)
+//   text-decoration: none
+//   &:hover, &:focus
+//     padding-bottom: $padding-bottom
+//     border-bottom: $border-bottom
+//
+// //가변전달인자
+// =multi-background-image($gradient...)
+//   -webkit-background-image: $gradient
+//   -moz-background-image: $gradient
+//   background-image: $gradient
+//
+//
+// 전역변수: 어디에서나 접근 가능
+// parameter: 지역변수, 믹스인 내부에서만 접근 가능. 전역변수와 이름이 같아도 값은 다름.
+
+body
+  +transition(opacity, 0.4s, ease, 0.3s)
+  // +transition(opacity 0.4s ease)
+
+a
+  +hover-link()
+
+.special-area
+  @extend %clearfix
+  +transition($easing-function: cubic-bezier(0.175, 0.885, 0.320, 1.275), $property: height)
+  // 특정 키워드를 사용해서 해당 키워드 부분의 속성만 바꿔준다.
+  // 전달인자의 순서를 기억하기 힘들기 때문이 사용
+  // +transition(opacity 0.4s ease)
+
+.row
+  +clearfix()
+  // @extend %clearfix
+
+.container .wrapper
+  +clearfix()
+
+.container.show-grid
+  +multi-background-image(linear-gradient(90deg, hsla(211, 66%, 57%, 0.42) 50%, hsla(216, 81%, 89%, 0.57) 50%), linear-gradient(90deg, hsla(211, 66%, 57%, 0.42) 50%, hsla(216, 81%, 89%, 0.57) 50%), linear-gradient(90deg, hsla(211, 66%, 57%, 0.42) 50%, hsla(216, 81%, 89%, 0.57) 50%))
+
+.circle-1
+  +circle()
+  +position(absolute, top 0 left 0)
+
+.circle-2
+  +circle($bg-color: red)
+
+$n: 1
+$i: 1
+$count: 16
+%fl
+  float: left
+$column-base-width: 120px
+$column-count: 16
+$gutter-base-width: 0
+$fluid: false
+// @while $n < $count
+//   @debug $n
+//   .col-#{$n}
+//     @extend %fl
+//     width: column($n)
+//   $n: $n + 1
+
+@for $i from 1 to $count
+  @debug $i
+  .col-#{$i}
+    @extend %fl
+    width: column($i)
+
+// @each
+// Sass List Type
+$icon-list: play, pause, next, prev, stop
+@each $icon in $icon-list
+  .icon-#{$icon}
+    background-image: url("images/icons/icon-#{$icon}.png")
+
+// Sass Map Type
+$heading-map: (h1: 3rem, h2: 2.2rem, h3: 1.8rem, h4: 1.6rem)
+// @each $heading in $heading-map
+//   $h: nth($heading, 1)
+//   $v: nth($heading, 2)
+//   #{$h}
+//     font-size: $v
+
+@each $heading, $font-size in $heading-map
+  #{$heading}
+    font-size: $font-size

@@ -1,0 +1,84 @@
+@mixin transition($property: all, $duration: 400ms, $easing-function: linear, $delay: null) {
+  -webkit-transition: $property $duration $easing-function $delay;
+  -moz-transition: $property $duration $easing-function $delay;
+  // -o-transition: $property $duration $easing-function $delay;
+  transition: $property $duration $easing-function $delay;
+}
+
+// mixin 조건 처리 가능,
+@mixin clearfix($support-ie: true) {
+  @extend %clearfix;
+  @if $support-ie {
+    .lt-ie8 & {
+      zoom: 1;
+    }
+  }
+}
+  // &::after
+  //   content: ''
+  //   display: block
+  //   clear: both
+
+// 키워드
+@mixin hover-link($padding-bottom: 2px, $border-bottom: 1px solid tomato) {
+  text-decoration: none;
+  &:hover, &:focus {
+    padding-bottom: $padding-bottom;
+    border-bottom: $border-bottom;
+  }
+}
+
+//가변전달인자
+@mixin multi-background-image($bgs...) {
+  -webkit-background-image: $bgs;
+  -moz-background-image: $bgs;
+  background-image: $bgs;
+}
+
+@mixin border-radius($radius: 4px) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin background-origin($origin: padding-box) {
+  -webkit-background-origin: $origin;
+  -moz-background-origin: $origin;
+  background-origin: $origin;
+}
+
+@mixin background-clip($clip: padding-box) {
+  -webkit-background-clip: $clip;
+  -moz-background-clip: $clip;
+  background-clip: $clip;
+}
+
+// google css shape 검색
+// https://css-tricks.com/examples/ShapesOfCSS/
+// http://url.yamoo9.net/grid
+@mixin circle($diameter: 100px, $bg-color: #000) {
+  width: $diameter;
+  height: $diameter;
+  background: $bg-color;
+  @include border-radius($diameter / 2);
+  @include background-clip;
+}
+
+// bourbon
+@mixin size($width, $height: null) {
+  width: $width;
+  height: $height;
+}
+
+@mixin position($position, $args) {
+  position: $position;
+
+  @if $args != null {
+    @each $dir in top, left, right, bottom, z-index {
+      $i: index($args, $dir);
+      @if $i {
+				#{$dir}: nth($args, $i + 1);
+			}
+    }
+  }
+}
