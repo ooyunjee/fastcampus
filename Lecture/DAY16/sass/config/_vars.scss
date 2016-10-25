@@ -1,0 +1,19 @@
+// 변수 선언
+$app-width: 940px;
+$app-min-height: 60px;
+
+// 중단점(break point) 설계
+$bp-prop: min-width;
+$bp-md: 760px;
+$bp-lg: 1220px;
+$bp-xl: 1480px;
+
+$medium-rwd-bp: "screen and (#{$bp-prop}: #{$bp-md + 1}) and (max-width: #{$bp-lg})";
+
+// 가운데 정렬 박스 모듈
+// transform: translate 호환성 이슈때문에 이방식 사용.
+$box-width: 400px;
+$box-height: 200px;
+
+// 구글 웹폰트
+$google-webfont-name: "Abhaya+Libre|Open+Sans|Roboto";

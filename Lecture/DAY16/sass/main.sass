@@ -1,0 +1,90 @@
+// 외부에 분리된 재사용 가능한 모듈을 로드
+// Sass 파일(*.scss, *.sass)의 경우는
+// main.sass 파일 해석 시 병합(Merge, Combine)되어
+// 하나의 main.css로 css 폴더 내부에 생성된다.
+// ※ 재사용 가능한 모듈 파일 이름 앞에 _ 를 붙이지 않으면
+// css 폴더에 해당 파일이 생성된다.
+// 예) sass/modules/grid.scss -> css/modules/grid.css
+
+@import "config/vars"
+@import "config/mixins"
+@import "modules/normalize"
+@import "modules/grid-hidden-module-name"
+@import url("https://fonts.googleapis.com/css?family=#{$google-webfont-name}")
+
+//
+// 사용자 정의 스타일링 코드 파트
+//
+$app-width: 1000px !default
+
+.app
+  // Mobile First Samll Screen
+  @extend %grid-container
+  @include box-sizing(border-box)
+  // width: 100%
+  // Medium Screen
+  @media screen and (max-width: $bp-md)
+    width: 80%
+  @media #{$medium-rwd-bp}
+    width: $app-width
+  @media screen and ($bp-prop: $bp-xl)
+    width: $app-width + 80
+
+  .app-row
+    @extend %grid
+    @extend %grid-left
+    @extend %grid-gutters
+    @media screen and ($bp-prop: $bp-md)
+      margin-top: 0
+    @media screen and ($bp-prop: $bp-lg)
+      margin-top: 10px
+    @media screen and ($bp-prop: $bp-xl)
+      margin-top: 20px
+
+    .app-fix
+      @extend %cell-m-1-2
+      @extend %cell-t-1-3
+      @extend %cell-d-1-4
+
+    > div
+      @extend %cell
+      @extend %grid-cm
+      min-height: $app-min-height
+      background: #854b4b
+      color: #fefefe
+
+  .center-box
+    position: absolute
+    top: 0
+    left: 0
+    width: $box-width
+    height: $box-height
+    margin:
+      top: $box-height / -2
+      left: $box-width / -2
+
+// type: Number
+$base: 13px
+body
+  // Number 이기 때문에 연산됨.
+  // 보간법
+  font: #{$base}/1.5 Dotum
+  font: $base / 1.5 Dotum
+  font: ($base / 1.5) Dotum
+  // 변수 재정의
+  $base: 13
+  font: $base+px/1.5 Dotum
+  font: $base+px / 1.5 Dotum
+  font: ($base/13 + $base/1.3)+px / 1.5 Dotum
+
+// @include mixin name
+.element
+  @include border-radius
+  @include box-sizing(content-box)
+  @include transition()
+
+.node
+  @include border-radius
+
+.pro ul
+  @include reset-list
