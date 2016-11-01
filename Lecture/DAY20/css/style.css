@@ -1,0 +1,11 @@
+body { margin: 2.5rem 6.25rem; font-size: 0.875rem; }
+
+#go-to-point { font-size: 0.75em; }
+
+#go-to-point a { margin-left: 0.3125rem; margin-right: 0.3125rem; border-radius: 0.25rem; padding: 0.6em; background: #222; color: #fff; text-decoration: none; }
+
+[id^="point-"] { border-bottom: 0.1875rem solid #3c5181; padding-bottom: 3em; color: #363636; }
+
+[id^="point-"] h2::before { display: block; content: ''; width: 1px; height: 15px; background: #879802; transform: rotate(-45deg) translateX(-10px); }
+
+/*# sourceMappingURL=../map/style.css.map */
