@@ -1,0 +1,22 @@
+body
+  margin: 5rem
+
+  .copyzone
+    position: relative
+    top: 50px
+    min-height: 20vh
+    border-radius: 5px
+    border: 8px solid #5b2807
+    padding: 2rem
+    &::before
+      content: attr(class)
+      position: absolute
+      top: -27px
+      left: 50%
+      font-size: 1rem
+      background: #fff
+      text-transform: uppercase
+      color: rgb(119, 12, 26)
+      padding: 0.3em 1em
+      border: 8px solid #5b2807
+      transform: translateX(-50%)

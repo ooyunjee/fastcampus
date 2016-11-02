@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JavaScript + DOM API</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style media="screen">
+     .container button {
+       background: transparent;
+       cursor: pointer;
+       border: 0;
+       outline: none;
+     }
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .section-1, .section-2 {
+      padding: 2em;
+      border: 1px solid #000;
+    }
+    .section-1 {
+      background: #000;
+    }
+    .section-2 {
+      background: #fff;
+    }
+    .section-1 > div,
+    .section-2 > div {
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  
+
+  <button type="button" class="copy-gnb-button">copy GNB Element</button>
+  <nav class="gnb" id="gnb">
+    <ul role="presentation">
+      <li><a href="#" rel="external">link-07</a></li>
+      <li><a href="#" rel="external">link-06</a></li>
+      <li><a href="#" rel="external">link-05</a></li>
+      <li><a href="#" rel="external">link-04</a></li>
+    </ul>
+  </nav>
+
+  <p class="target-paragraph">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor <strong>incididunt</strong> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </p>
+
+  <div class="container">
+    <div class="section-1">
+      <button type="button"><img src="img/confession.png" alt="confession"></button>
+      <button type="button"><img src="img/kubo.png" alt=""></button>
+      <button type="button"><img src="img/louder.png" alt=""></button>
+    </div>
+    <div class="section-2">
+      <button type="button"><img src="img/notebook.png" alt=""></button >
+      <button type="button"><img src="img/stranger.png" alt=""></button >
+      <button type="button"><img src="img/woman.png" alt=""></button >
+    </div>
+  </div>
+
+  <div class="copyzone"></div>
+
+  <!-- 문서 객체 모델 API를 보다 손쉽게 처리해주는 자바스크립트 라이브러리 -->
+  <!-- 의존성 때문에 Helper를 먼저 부른다. app.js는 DOM_Helper.js에 의존한다. -->
+  <!-- <script src="lib/DOM_Helper.js" charset="utf-8"></script> -->
+  <!-- <script src="js/app.js" charset="utf-8"></script> -->
+  <script src="js/dom-api.js" charset="utf-8"></script>
+</body>
+</html>

@@ -1,0 +1,3 @@
+body{margin:5rem}body .copyzone{position:relative;top:50px;min-height:20vh;border-radius:5px;border:8px solid #5b2807;padding:2rem}body .copyzone::before{content:attr(class);position:absolute;top:-27px;left:50%;font-size:1rem;background:#fff;text-transform:uppercase;color:#770c1a;padding:0.3em 1em;border:8px solid #5b2807;transform:translateX(-50%)}
+
+/*# sourceMappingURL=../.css/style.css.map */
