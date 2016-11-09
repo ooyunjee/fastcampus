@@ -36,9 +36,9 @@
 
   var gnb_first = $.first(gnb);
   // var gnb_first_first = $.first(gnb_first);
-  var gnb_prev_el = $.prevEl(gnb);
-  var gnb_next_p = $.nextEl(gnb);
-  var gnb_next_p_parent = $.parentEl(gnb_links[2], 2);
+  var gnb_prev_el = $.prev(gnb);
+  var gnb_next_p = $.next(gnb);
+  var gnb_next_p_parent = $.parent(gnb_links[2], 2);
 
   console.log('gnb_first:', gnb_first);
   // console.log('gnb_first_first:', gnb_first_first);

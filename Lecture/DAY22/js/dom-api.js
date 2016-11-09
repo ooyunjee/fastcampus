@@ -237,7 +237,7 @@
   // nav 요소의 뒤에 형제요소로 <div>를 추가하라.
   nav.insertAdjacentHTML('afterend', '<div class="insert-div">afterend</div>');
 
-})(this); //(this)
+}); //(this)
 
 // section1 가져오기
 // section2 가져오기
@@ -253,75 +253,83 @@
 (function(global) {
   'use strict';
 
-  var container = document.querySelector('.container');
+
+
+  // function twoImageChange() {
+  //   // console.log('twoImageChange');
+  //   // validation
+  //   // if(!section_1 || section_1.nodeType !== 1) {
+  //   //   throw new Error('두번째 인자는 요소 노드를 전달해야 합니다.');
+  //   // }
+  //   // if(!section_2 || section_2.nodeType !== 1) {
+  //   //   throw new Error('첫번째 인자는 요소 노드를 전달해야 합니다.');
+  //   // }
+  //   //
+  //   var section_1 = container.querySelector('.section-1');
+  //   var section_2 = container.querySelector('.section-2');
+  //
+  //   var btns_1 = section_1.querySelectorAll('button');
+  //   var btns_2 = section_2.querySelectorAll('button');
+  //
+  //   for(var i = 0, l = btns_1.length; i < l; i++) {
+  //     var btn_1 = btns_1[i];
+  //
+  //     btn_1.onclick = changPosition;
+  //   }
+  //
+  //   // 이미지 border 추가 메소드
+  //   function changeStyle(btn) {
+  //     btn.style.border = '5px solid #913c3c';
+  //   }
+  //
+  //   // 이미지 border 삭제 메소드
+  //   function resetBtnStyle(btn) {
+  //     btn.style.border = 0;
+  //   }
+  //
+  //   function changPosition() {
+  //     console.log('btn-1 clicked');
+  //     console.log(btns_1);
+  //     var first_box = this;
+  //
+  //     changeStyle(first_box);
+  //
+  //     for(var i = 0, l = btns_2.length; i < l; i++) {
+  //       var btn_2 = btns_2[i];
+  //
+  //       btn_2.onclick = function() {
+  //         console.log('btn-2 clicked');
+  //         console.log(btns_2);
+  //         var second_box = this;
+  //
+  //         var second_box_next = second_box.nextSibling;
+  //
+  //         // 두번째 image에 border 설정
+  //         changeStyle(second_box);
+  //
+  //         // image 교체
+  //         first_box.parentNode.replaceChild(second_box, first_box);
+  //         second_box_next.parentNode.insertBefore(first_box, second_box_next);
+  //
+  //         // 이미지 border 삭제
+  //         resetBtnStyle(first_box);
+  //         resetBtnStyle(second_box);
+  //
+  //         btns_1 = section_1.querySelectorAll('button');
+  //         btns_2 = section_2.querySelectorAll('button');
+  //
+  //         // console.log(section_1);
+  //         // console.log(section_2);
+  //         console.log(btns_1);
+  //         console.log(btns_2);
+  //       };
+  //     }
+  //   }
+  //
+  // }
+
+  // twoImageChange();
 
 
 
-  function twoImageChange() {
-    // console.log('twoImageChange');
-    // validation
-    // if(!section_1 || section_1.nodeType !== 1) {
-    //   throw new Error('두번째 인자는 요소 노드를 전달해야 합니다.');
-    // }
-    // if(!section_2 || section_2.nodeType !== 1) {
-    //   throw new Error('첫번째 인자는 요소 노드를 전달해야 합니다.');
-    // }
-    //
-    var section_1 = container.querySelector('.section-1');
-    var section_2 = container.querySelector('.section-2');
-
-    var btns_1 = section_1.querySelectorAll('button');
-    var btns_2 = section_2.querySelectorAll('button');
-
-    for(var i = 0, l = btns_1.length; i < l; i++) {
-      var btn_1 = btns_1[i];
-      
-      btn_1.onclick = changPosition;
-    }
-
-    // 이미지 border 추가 메소드
-    function changeStyle(btn) {
-      btn.style.border = '5px solid #913c3c';
-    }
-
-    // 이미지 border 삭제 메소드
-    function resetBtnStyle(btn) {
-      btn.style.border = 0;
-    }
-
-    function changPosition() {
-      console.log('btn-1 clicked');
-      var first_box = this;
-
-      changeStyle(first_box);
-
-      for(var i = 0, l = btns_2.length; i < l; i++) {
-        var btn_2 = btns_2[i];
-
-        btn_2.onclick = function() {
-          console.log('btn-2 clicked');
-          var second_box = this;
-
-          var second_box_next = second_box.nextSibling;
-
-          // 두번째 image에 border 설정
-          changeStyle(second_box);
-
-          // image 교체
-          first_box.parentNode.replaceChild(second_box, first_box);
-          second_box_next.parentNode.insertBefore(first_box, second_box_next);
-
-          // 이미지 border 삭제
-          resetBtnStyle(first_box);
-          resetBtnStyle(second_box);
-        };
-      }
-    }
-
-  }
-
-  twoImageChange();
-
-
-
-})(this); //(this)
+}); //(this)
