@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JavaScript Events</title>
+  <script>
+    // btn은 이벤트 객체
+    // function clickButton(btn) {
+    //   window.alert('clicked button element.');
+    //
+    //   // 방법 2
+    //   // localName은 소문자, nodeName은 대문자
+    //   // if(this.nodeName === 'BUTTON'  && typeof btn === 'object') {
+    //   //   btn = this;
+    //   //   console.log('새로 만든 버튼');
+    //   // }
+    //
+    //   // 방법 3
+    //   console.log('this:', this);
+    //   console.log('btn:', btn);
+    //   var btn_first = btn.firstChild;
+    //   if(btn_first.nodeValue==='click me') {
+    //     btn_first.nodeValue ='This is button clicked.';
+    //   } else {
+    //     btn_first.nodeValue ='click me';
+    //   }
+    // }
+  </script>
+  <script>
+    (function(global) {
+      'use strict';
+
+      var look_at_btn = document.querySelector('.look-at-button');
+      var click_me_btn = document.querySelector('.click-me-button');
+
+      // 버튼을 몇 회 이상 클릭한 후에는 버튼을 사용자가 클릭할 수 없게 만들고자 한다.
+      // 버튼을 클릭한 횟수를 기억할 변수
+      var click_count = 0;
+
+      // [이벤트 연결] 이벤트 속성에 함수 값 연결
+      look_at_btn.onclick = function() {
+        console.log('clicked: ', this.onclick);
+        if(++click_count === 2) {
+          // 클릭한 횟수가 2회가 되면 버튼을 사용자가 클릭할 수 없게 만든다.
+          // this.setAttribute('disabled', 'disabled');
+
+          // [이벤트 제거] 이벤트 속성에 null을 대입해서 연결된 함수를 끊음
+          this.onclick = null; // 참조한 함수를 끊고 대입
+          console.log('finished:', this.onclick);
+        }
+      };
+
+      // 방법 0
+      // look_at_btn.onclick = clickButton;
+
+      // 방법 1
+      // look_at_btn.onclick = function() {
+      //   // this === look_at_btn
+      //   // 함수 지역 내에서 참조가 되지 않는 변수, 혹은 함수는
+      //   // 암묵적으로 스코프 체이닝을 통해 상위영역으로 올라가서
+      //   // 결국은 전역까지 가서 전역함수를 실행하게 된다.
+      //   // 성능 이슈, 디버깅 이슈
+      //   window.clickButton(this);
+      // };
+
+      // 방법 3 (ES 5)
+      // look_at_btn.onclick = clickButton.bind(window, click_me_btn);
+
+      // look_at_btn.onclick = function(btn) {
+      //   btn = this;
+      //   var btn_first = btn.firstChild;
+      //   if(btn_first.nodeValue==='click me') {
+      //     btn_first.nodeValue ='This is button clicked.';
+      //   } else {
+      //     btn_first.nodeValue ='click me';
+      //   }
+      // };
+
+
+
+      /** @function init(); 애플리케이션 초기화 */
+      function init() {
+
+        var look_at_btn = document.querySelector('.look-at-button');
+        // 버튼을 몇 회 이상 클릭한 후에는 버튼을 사용자가 클릭할 수 없게 만들고자 한다.
+        // 버튼을 클릭한 횟수를 기억할 변수
+        var click_count = 0;
+
+        // [이벤트 연결] 이벤트 속성에 함수 값 연결
+        look_at_btn.onclick = function() {
+          console.log('clicked: ', this.onclick);
+          if(++click_count === 2) {
+            // 클릭한 횟수가 2회가 되면 버튼을 사용자가 클릭할 수 없게 만든다.
+            // this.setAttribute('disabled', 'disabled');
+
+            // [이벤트 제거] 이벤트 속성에 null을 대입해서 연결된 함수를 끊음
+            this.onclick = null; // 참조한 함수를 끊고 대입
+            console.log('finished:', this.onclick);
+          }
+        };
+        // window{} 객체의 resize 이벤트 속성에 실행할 함수를 연결
+        window.onresize = checkWindowResize;
+      }
+
+      function getWindowWidth() {
+        return window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+      }
+      /** @function checkWindowResize 창 크기 조정 시, 처리되는 함수 */
+      function checkWindowResize() {
+        var device_width = getWindowWidth();
+        if ( device_width > 1200 ) {
+          console.log('device is desktop');
+        } else if ( device_width <= 1200 && device_width > 768 ) {
+          console.log('device is tablet');
+        } else {
+          console.log('device is mobile');
+        }
+        // console.log('창(window)의 너비:', this.innerWidth);
+      }
+
+
+      // initialization();
+      // 애플리케이션 초기화는 문서의 모든 것이 준비된 다음에 실행하라.
+      // load 이벤트는 무척 느림!! (특히 이미지 개수가 많고 용량이 큰 페이지)
+      // window.onload = init;
+      // window.onload = checkWindowResize;
+
+      window.onload = function() {
+        checkWindowResize();
+        init();
+      };
+
+    })(this);
+  </script>
+</head>
+<body>
+  <button type="button" class="look-at-button">Look</button>
+  <button onclick="clickButton(this);" type="button" class="click-me-button">click me</button>
+
+</body>
+</html>
