@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>jQuery Core - factory function</title>
+  <script src="http://code.jquery.com/jquery.min.js" charset="utf-8"></script>
+  <script>
+    jQuery(function($){
+      // 함수 내부이기 때문에
+      // 안정적으로 $를 사용할 수 있다.
+
+      var $span = $('span', this);
+
+      var changeColor = function(e){
+        // jQuery 메소드 내부에 전달되는 함수 내부의 this는
+        // jQuery 객체가 아닌 벗겨진 DOM 객체를 가리킨다.
+        e.preventDefault();
+        $span.css('color', '#e2a485');
+      };
+
+      var changeSpanTextUpper = function(e){
+        // 기존의 텍스트 설정 값을 가져와 대문자로 변환한 후
+        // 변수에 복사
+        var span_changed_text = $span.text().toUpperCase();
+        // 복사된 값의 변수를 다시 $span jQuery {}의 메소드 text()를 사용해서
+        // 내용값을 변경
+        $span.text(span_changed_text);
+      };
+
+      $('a.foo').click(changeColor);
+      $('a.foo').click(changeSpanTextUpper);
+
+    });
+  </script>
+</head>
+<body>
+  <a href="http://jquery.com" target="_blank" class="foo">
+    <span>f</span>oo
+  </a>
+
+  <script>
+    // (function(global, $) {
+    //   'use strict';
+    //
+    //
+    // })(this, this.jQuery);
+  </script>
+</body>
+</html>
