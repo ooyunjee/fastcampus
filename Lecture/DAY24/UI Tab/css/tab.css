@@ -1,0 +1,38 @@
+/**
+ * ----------------------------------------------------------------------------
+ * 탭 컴포넌트 디자인
+ * 상태 디자인
+ * ----------------------------------------------------------------------------
+ */
+
+.tab-container {
+
+}
+
+.tab-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.tab-list li {
+  display: inline-block;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.tab {
+  display: inline-block;
+  text-decoration: none;
+  background: #222;
+  color: #fefefe;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+}
+
+.tab-panel-wrapper {
+
+}
+
+.tab-panel {
+
+}
