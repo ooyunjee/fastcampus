@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!--[if !IE]><!-->
+<html lang="ko-KR" dir="ltr" data-ng-app>
+<!--<![endif]-->
+<!--[if IE 9]> <html class="no-js lt-ie10 ie9" dir="ltr" lang="ko-KR"> <![endif]-->
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta charset="UTF-8">
+  <title>Angular V1 + Webpack + Sass + ES2015(Babel) 프로젝트</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./assets/app.css">
+  <style media="screen">
+    body { background: {{app_background_color}}; }
+  </style>
+</head>
+<!-- Angular Directive -->
+<body data-ng-init="
+  app_version = '1.0.1';
+  app_background_color = '#053f66';
+  accordian_tabs = {
+    'one': true,
+    'two': false,
+    'three': false
+  };
+">
+  <a href="/">back</a>
+  <h1>Angular Accordian Tab Menu</h1>
+  <button
+    type="button"
+    class="change-body-bg-color"
+    data-ng-class="{
+      'pressed: pressed_change_bg_button',
+      'un-pressed: !pressed_change_bg_button'
+    }"
+    data-ng-click="app_background_color='#617776';">
+      <span>change bgcolor</span>
+    </button>
+
+  <div class="ui-accordian">
+    <h3 class="ui-accordian-tab">
+      <a href="" data-ng-click="accordian_tabs.one=!accordian_tabs.one">tab 1</a>
+    </h3>
+    <div class="ui-accordian-tabpanel" data-ng-show="accordian_tabs.one">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione autem dolorem in eos culpa explicabo ipsum voluptates asperiores architecto, omnis pariatur, quae mollitia nobis sunt velit nemo vero. Recusandae, distinctio.
+    </div>
+    <h3 class="ui-accordian-tab">
+      <a href="" data-ng-click="accordian_tabs.two=!accordian_tabs.two">tab 2</a>
+    </h3>
+    <div class="ui-accordian-tabpanel" data-ng-show="accordian_tabs.two">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat commodi quibusdam veritatis adipisci cupiditate natus quidem qui reiciendis voluptas ratione saepe distinctio, corporis beatae aliquid, accusamus earum consequatur odit tempora.Ratione autem dolorem in eos culpa explicabo ipsum voluptates asperiores architecto, omnis pariatur, quae mollitia nobis sunt velit nemo vero. Recusandae, distinctio.
+    </div>
+    <h3 class="ui-accordian-tab">
+      <a href="" data-ng-click="accordian_tabs.three=!accordian_tabs.three">tab 3</a>
+    </h3>
+    <div class="ui-accordian-tabpanel" data-ng-show="accordian_tabs.three">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione autem dolorem in eos culpa explicabo ipsum voluptates asperiores architecto.
+    </div>
+  </div>
+
+
+
+
+<script src="./assets/app.js"></script>
+</body>
+</html>
