@@ -28,11 +28,18 @@
   padding: 0.5em 1em;
   border-radius: 5px;
 }
+.tab.active {
+  background: #818181;
+  color: #fefefe;
+}
 
 .tab-panel-wrapper {
 
 }
 
 .tab-panel {
-
+  display: none;
+}
+.tab-panel.active {
+  display: block;
 }

@@ -37,9 +37,11 @@ this.FDS = (function() {
       });
 
       this.el.appendChild(wrapper);
+      // console.log('this', this);
 
-      this.activeTab(this.active_index);
+      // this.activeTab(this.active_index);
 
+      // console.log('this', this.tabs);
       this.events();
     },
     'removeTabs': function() {
@@ -52,8 +54,26 @@ this.FDS = (function() {
       this.removeTabs();
       this.tabs.item(this.active_index).classList.add('active');
     },
+    'removePanels': function() {
+      forEach.call(this.panels, function(panel) {
+        panel.classList.remove('active');
+      });
+    },
+    'activePanel': function(active_index) {
+      this.active_index = active_index;
+      this.removePanels();
+      this.panels.item(this.active_index).classList.add('active');
+    },
     'events': function() {
-      // this.el.addEventListner('click', )
+      console.log('this', this);
+      var tab_component = this;
+      forEach.call(this.tabs, function(tab, index) {
+        tab.addEventListener('click', function(){
+          console.log(index);
+          tab_component.activeTab(index);
+          tab_component.activePanel(index);
+        });
+      });
     }
   };
 

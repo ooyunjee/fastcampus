@@ -201,6 +201,7 @@ var linkCounter = function() {
 };
 
 gnb_links.forEach(function(link, index) {
+  console.log('link', link);
   link.addEventListener('click', linkCounter);
 });
 
