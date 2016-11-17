@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ajax 비동기 통신</title>
+  <style media="screen">
+  body {
+      width: 80%;
+      margin: 0 auto;
+      padding: 3em;
+      height: 100vh;
+    }
+    .call-ajax-data {
+      cursor: pointer;
+      padding: 1em;
+      border: 0;
+      color: #fff;
+      border-radius: 4px;
+    }
+    .call-ajax-data:focus {
+      outline: none;
+      box-shadow: 0 3px 0 hsla(0, 0%, 55%, 0.75);
+    }
+    .call-ajax-data:active {
+      position: relative;
+      top: 2px;
+    }
+    .call-ajax-data.data-txt {
+      background: #994500;
+    }
+    .call-ajax-data.data-html {
+      background: #b65a0f;
+    }
+    .call-ajax-data.data-xml {
+      background: #e2853b;
+    }
+    .call-ajax-data.data-json {
+      background: #da6d15;
+    }
+    .ajax-data-result {
+      border: 8px solid #994500;
+      padding: 2em;
+      font-size: 20px;
+      color: #333;
+    }
+    .ajax-data-result.error {
+      color: #a60007;
+    }
+    table {
+      border-collapse: collapse;
+    }
+    strong {
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+  <button type="button" class="call-ajax-data data-txt">call <strong>txt</strong></button>
+  <button type="button" class="call-ajax-data data-html">call <strong>html</strong></button>
+  <button type="button" class="call-ajax-data data-xml">call <strong>xml</strong></button>
+  <button type="button" class="call-ajax-data data-json">call <strong>json</strong></button>
+  <p class="ajax-data-result">
+    버튼을 클릭하면 여기에 불러와진 데이터가 출력됩니다.
+  </p>
+  <!-- <script src="ajax.study.js" charset="utf-8"></script> -->
+  <script src="ajax-data-type-calling.js" charset="utf-8"></script>
+</body>
+</html>

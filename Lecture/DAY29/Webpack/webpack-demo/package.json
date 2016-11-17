@@ -1,0 +1,14 @@
+{
+  "name": "webpack-demo",
+  "version": "1.0.0",
+  "description": "About Webpack Module Bundler",
+  "scripts": {
+    "start": "http-server -p 9090 -o -a localhost"
+  },
+  "keywords": [],
+  "author": "yunjee",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^1.13.3"
+  }
+}
