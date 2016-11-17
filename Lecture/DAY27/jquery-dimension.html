@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta charset="UTF-8">
+  <title>jQuery Box One Click</title>
+  <style media="screen">
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .box {
+      box-sizing: border-box;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /*flex: 1;*/
+      width: 200px;
+      height: 200px;
+      margin: 10px;
+      border: 5px solid #ffd219;
+      padding: 10px;
+      background: #333;
+      color: #fff;
+    }
+    .clicked {
+      user-select: none;
+      -webkit-user-select: none;
+      cursor: default;
+      background: #aaa;
+      color: #222;
+    }
+  </style>
+  <!-- jQuery 라이브러리 [ CDN | Local ] -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script>this.jQuery || document.write('<script src="../Modules/JS/jquery.min.js"><\/script>');</script>
+</head>
+<body>
+
+  <div class="box">Box</div>
+  <div class="box">Box</div>
+  <div class="box">Box</div>
+  <div class="box">Box</div>
+  <div class="box">Box</div>
+  <div class="box">Box</div>
+
+  <script src="js/jquery-dimension.js"></script>
+</body>
+</html>
