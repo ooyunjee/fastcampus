@@ -89,10 +89,12 @@
     var html_string = ['<h3>brand properties</h3>'];
 
     for (var prop in props) {
-      html_string.push(`<p><code>${prop}: ${props[prop]}</code></p>`);
+      // html_string.push(`<p><code>${prop}: ${props[prop]}</code></p>`);
+      html_string.push("<p><code>" + prop + ": " + props[prop] + "</code></p>");
     }
 
-    $('.you').html(html_string);
+    $('.you').html(html_string.join(''));
+
   });
 
   ///////////////////////////////////////////////////////

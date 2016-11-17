@@ -68,10 +68,36 @@ var fds = (function(global, jQuery){
   $target = $(':target');
 
   $target = $('article h2:first-child');
-  
+
   // 선택된 집합에 클래스 속성 설정
   $target.addClass('selected');
 
+  ////////////////////
+  // jQuery Filters //
+  ////////////////////
+
+  // :first
+  // :last
+  // :eq(number)
+  // :lt(number)
+  // :gt(number)
+  // :header
+  // :contains(text)
+  // :not(selector)
+  // :has(selector)
+  // :parent
+  // :empty
+
+  // jQuery.fn === jQuery.prototype
+  // jQuery 플러그인 제작
+  $.fn.gt = function(n) {
+    return this.slice(n+1);
+  };
+
+  // :hidden
+  // :visible
+  // :animated
+  
   return {
     $: jQuery // 비공개 멤버인 jQuery에 접근 가능한 유일한 방법: 특권 부여
   };
