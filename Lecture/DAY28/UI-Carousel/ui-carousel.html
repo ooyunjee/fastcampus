@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Carousel UI Component</title>
+  <link rel="stylesheet" href="css/ui-carousel.css">
+  <script src="lib/jquery.min.js"></script>
+  <script src="lib/jquery.easing.min.js"></script>
+</head>
+<body>
+
+
+  <article id="bs3-headphone">
+    <h1>Beats Solo3 Wireless On-Ear Headphones – Rose Gold</h1>
+    <ul>
+      <li><a href></a></li>
+      <li><a href></a></li>
+      <li><a href></a></li>
+      <li><a href></a></li>
+      <li><a href></a></li>
+      <li><a href></a></li>
+      <li><a href></a></li>
+      <li><a href></a></li>
+    </ul>
+    <div>
+      <img src="images/MNET2.jpeg" alt="MNET2">
+      <img src="images/MNET2_AV1.jpeg" alt="MNET2_AV1">
+      <img src="images/MNET2_AV2.jpeg" alt="MNET2_AV2">
+      <img src="images/MNET2_AV3.jpeg" alt="MNET2_AV3">
+      <img src="images/MNET2_AV4.jpeg" alt="MNET2_AV4">
+      <img src="images/MNET2_AV5.jpeg" alt="MNET2_AV5">
+      <img src="images/MNET2_AV6.jpeg" alt="MNET2_AV6">
+      <img src="images/MNET2_AV7.jpeg" alt="MNET2_AV7">
+    </div>
+  </article>
+
+  <p class="readable-hidden" id="bs3-headphone-desc">
+    This is Carousel Component "Beats Solo3 Wireless On-Ear Headphones – Rose Gold" Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus molestiae tenetur dolores, aliquam debitis blanditiis asperiores consequatur vitae voluptate repellendus.
+  </p>
+
+  <script src="js/ui-carousel-animate.js"></script>
+
+  <script>
+  (function(global, $){
+    'use strict';
+
+    var bs3 = new ui_Carousel('#bs3-headphone');
+
+    bs3.viewTabpanel(3);
+
+    global.bs3 = bs3;
+
+  })(this, this.jQuery);
+  </script>
+</body>
+</html>
